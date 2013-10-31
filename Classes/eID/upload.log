@@ -1,0 +1,1820 @@
+
+Array
+(
+    [time] => 2011-10-17 14:11:36
+    [error] => 
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [max_size] => 10485760
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpDcrgWJ
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:11:56
+    [error] => 
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [max_size] => 10485760
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpq3wBGM
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:13:06
+    [error] => 
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpZoN6BI
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:14:25
+    [error] => 
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpMY08JQ
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:16:31
+    [error] => 
+	<table class="typo3-debug" border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border:0px; margin-top:3px; margin-bottom:3px;">
+		<tr>
+			<td style="background-color:#bbbbbb; font-family: verdana,arial; font-weight: bold; font-size: 10px;">exec_INSERTquery</td>
+		</tr>
+		<tr>
+			<td>
+			
+			<table border="1" cellpadding="1" cellspacing="0" bgcolor="white"><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">caller</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">t3lib_DB::exec_INSERTquery<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">ERROR</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">Duplicate entry '69a01d1a808173ec209d' for key 1<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">lastBuiltQuery</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">INSERT INTO cache_md5params (md5hash,tstamp,type,params) VALUES ('69a01d1a808173ec209d5f033715bcd5','1318853791','25','/var/www/domains/dev.kultur-vermittlung.ch/uploads/tx_cabagartprojects/screenshot_2011-10-14_um_14.28.51_37.png')<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">debug_backtrace</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">require#84 // require#194 // Tx_CabagExtbase_eID_Flashupload-&gt;move#168 // t3lib_DB-&gt;exec_INSERTquery#53 // t3lib_DB-&gt;debug#172<br /></font></td>
+					</tr></table>
+			</td>
+		</tr>
+	</table>
+	
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpPPvr9M
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:19:52
+    [error] => DELETE FROM cache_md5params WHERE md5hash = '69a01d1a808173ec209d5f033715bcd5'
+	<table class="typo3-debug" border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border:0px; margin-top:3px; margin-bottom:3px;">
+		<tr>
+			<td style="background-color:#bbbbbb; font-family: verdana,arial; font-weight: bold; font-size: 10px;">exec_INSERTquery</td>
+		</tr>
+		<tr>
+			<td>
+			
+			<table border="1" cellpadding="1" cellspacing="0" bgcolor="white"><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">caller</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">t3lib_DB::exec_INSERTquery<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">ERROR</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">Duplicate entry '69a01d1a808173ec209d' for key 1<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">lastBuiltQuery</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">INSERT INTO cache_md5params (md5hash,tstamp,type,params) VALUES ('69a01d1a808173ec209d5f033715bcd5','1318853992','25','/var/www/domains/dev.kultur-vermittlung.ch/uploads/tx_cabagartprojects/screenshot_2011-10-14_um_14.28.51_38.png')<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">debug_backtrace</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">require#84 // require#194 // Tx_CabagExtbase_eID_Flashupload-&gt;move#168 // t3lib_DB-&gt;exec_INSERTquery#53 // t3lib_DB-&gt;debug#172<br /></font></td>
+					</tr></table>
+			</td>
+		</tr>
+	</table>
+	
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpBrdrw1
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:20:23
+    [error] => DELETE FROM cache_md5params WHERE md5hash = '69a01d1a808173ec209d5f033715bcd5'
+	<table class="typo3-debug" border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border:0px; margin-top:3px; margin-bottom:3px;">
+		<tr>
+			<td style="background-color:#bbbbbb; font-family: verdana,arial; font-weight: bold; font-size: 10px;">exec_INSERTquery</td>
+		</tr>
+		<tr>
+			<td>
+			
+			<table border="1" cellpadding="1" cellspacing="0" bgcolor="white"><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">caller</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">t3lib_DB::exec_INSERTquery<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">ERROR</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">Duplicate entry '69a01d1a808173ec209d' for key 1<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">lastBuiltQuery</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">INSERT INTO cache_md5params (md5hash,tstamp,type,params) VALUES ('69a01d1a808173ec209d5f033715bcd5','1318854023','25','/var/www/domains/dev.kultur-vermittlung.ch/uploads/tx_cabagartprojects/screenshot_2011-10-14_um_14.28.51_39.png')<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">debug_backtrace</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">require#84 // require#194 // Tx_CabagExtbase_eID_Flashupload-&gt;move#168 // t3lib_DB-&gt;exec_INSERTquery#53 // t3lib_DB-&gt;debug#172<br /></font></td>
+					</tr></table>
+			</td>
+		</tr>
+	</table>
+	
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phptCdeTv
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:22:08
+    [error] => DELETE FROM cache_md5params WHERE md5hash = ''
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpfpMLr6
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:22:27
+    [error] => DELETE FROM cache_md5params WHERE md5hash = '69a01d1a808173ec209d'
+	<table class="typo3-debug" border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border:0px; margin-top:3px; margin-bottom:3px;">
+		<tr>
+			<td style="background-color:#bbbbbb; font-family: verdana,arial; font-weight: bold; font-size: 10px;">exec_INSERTquery</td>
+		</tr>
+		<tr>
+			<td>
+			
+			<table border="1" cellpadding="1" cellspacing="0" bgcolor="white"><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">caller</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">t3lib_DB::exec_INSERTquery<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">ERROR</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">Duplicate entry '69a01d1a808173ec209d' for key 1<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">lastBuiltQuery</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">INSERT INTO cache_md5params (md5hash,tstamp,type,params) VALUES ('69a01d1a808173ec209d','1318854147','25','/var/www/domains/dev.kultur-vermittlung.ch/uploads/tx_cabagartprojects/screenshot_2011-10-14_um_14.28.51_41.png')<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">debug_backtrace</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">require#84 // require#194 // Tx_CabagExtbase_eID_Flashupload-&gt;move#168 // t3lib_DB-&gt;exec_INSERTquery#53 // t3lib_DB-&gt;debug#172<br /></font></td>
+					</tr></table>
+			</td>
+		</tr>
+	</table>
+	
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpaHEQwe
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:23:09
+    [error] => DELETE FROM cache_md5params WHERE md5hash = '69a01d1a808173ec209d'
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/php9cI3K3
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:24:06
+    [error] => DELETE FROM cache_md5params WHERE md5hash = '69a01d1a808173ec209d'
+	<table class="typo3-debug" border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border:0px; margin-top:3px; margin-bottom:3px;">
+		<tr>
+			<td style="background-color:#bbbbbb; font-family: verdana,arial; font-weight: bold; font-size: 10px;">exec_INSERTquery</td>
+		</tr>
+		<tr>
+			<td>
+			
+			<table border="1" cellpadding="1" cellspacing="0" bgcolor="white"><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">caller</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">t3lib_DB::exec_INSERTquery<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">ERROR</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">Duplicate entry '69a01d1a808173ec209d' for key 1<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">lastBuiltQuery</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">INSERT INTO cache_md5params (md5hash,tstamp,type,params) VALUES ('69a01d1a808173ec209d','1318854246','25','/var/www/domains/dev.kultur-vermittlung.ch/uploads/tx_cabagartprojects/screenshot_2011-10-14_um_14.28.51_43.png')<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">debug_backtrace</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">require#84 // require#194 // Tx_CabagExtbase_eID_Flashupload-&gt;move#168 // t3lib_DB-&gt;exec_INSERTquery#53 // t3lib_DB-&gt;debug#172<br /></font></td>
+					</tr></table>
+			</td>
+		</tr>
+	</table>
+	
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpZHOinJ
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 14:24:46
+    [error] => DELETE FROM cache_md5params WHERE md5hash LIKE '69a01d1a808173ec209d'
+	<table class="typo3-debug" border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border:0px; margin-top:3px; margin-bottom:3px;">
+		<tr>
+			<td style="background-color:#bbbbbb; font-family: verdana,arial; font-weight: bold; font-size: 10px;">exec_INSERTquery</td>
+		</tr>
+		<tr>
+			<td>
+			
+			<table border="1" cellpadding="1" cellspacing="0" bgcolor="white"><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">caller</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">t3lib_DB::exec_INSERTquery<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">ERROR</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">Duplicate entry '69a01d1a808173ec209d' for key 1<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">lastBuiltQuery</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">INSERT INTO cache_md5params (md5hash,tstamp,type,params) VALUES ('69a01d1a808173ec209d','1318854286','25','/var/www/domains/dev.kultur-vermittlung.ch/uploads/tx_cabagartprojects/screenshot_2011-10-14_um_14.28.51_44.png')<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">debug_backtrace</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">require#84 // require#194 // Tx_CabagExtbase_eID_Flashupload-&gt;move#168 // t3lib_DB-&gt;exec_INSERTquery#53 // t3lib_DB-&gt;debug#172<br /></font></td>
+					</tr></table>
+			</td>
+		</tr>
+	</table>
+	
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpBAYOaj
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 16:15:28
+    [error] => DELETE FROM cache_md5params WHERE md5hash LIKE '69a01d1a808173ec209d'
+	<table class="typo3-debug" border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border:0px; margin-top:3px; margin-bottom:3px;">
+		<tr>
+			<td style="background-color:#bbbbbb; font-family: verdana,arial; font-weight: bold; font-size: 10px;">exec_INSERTquery</td>
+		</tr>
+		<tr>
+			<td>
+			
+			<table border="1" cellpadding="1" cellspacing="0" bgcolor="white"><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">caller</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">t3lib_DB::exec_INSERTquery<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">ERROR</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">Duplicate entry '69a01d1a808173ec209d' for key 1<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">lastBuiltQuery</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">INSERT INTO cache_md5params (md5hash,tstamp,type,params) VALUES ('69a01d1a808173ec209d','1318860928','25','/var/www/domains/dev.kultur-vermittlung.ch/uploads/tx_cabagartprojects/screenshot_2011-10-14_um_14.28.51_45.png')<br /></font></td>
+					</tr><tr>
+						<td valign="top"><font face="Verdana,Arial" size="1">debug_backtrace</font></td>
+						<td><font face="Verdana,Arial" size="1" color="red">require#84 // require#194 // Tx_CabagExtbase_eID_Flashupload-&gt;move#168 // t3lib_DB-&gt;exec_INSERTquery#53 // t3lib_DB-&gt;debug#172<br /></font></td>
+					</tr></table>
+			</td>
+		</tr>
+	</table>
+	
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [max_size] => 10485760
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpvWY9ak
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 16:16:22
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [max_size] => 10485760
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpVPb6K7
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-17 16:16:49
+    [error] => 
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [max_size] => 10485760
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [lookupid] => 16ecab4d320bd2e3d3972b6b702d1b2e-837066d93b3b13e3b436ef84fd2bb766
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpGcmgio
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 10:42:57
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+        )
+
+    [$_FILES] => Array
+        (
+        )
+
+    [verification] => c516913aae41f296e67260757abdc917
+    [pathinfo] => 
+    [exts] => Array
+        (
+            [0] => 
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 10:43:38
+    [error] => 2
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpqm9m7J
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => f69cf038593a695f09cf035d603e2c8b
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 10:45:05
+    [error] => 2
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 767112c63fc2c3c44ce7fd44d95449d4
+            [max_size] => 10485760
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [unique] => d41d8cd98f00b204e9800998ecf8427e
+            [file_types] => jpeg,jpg,gif,png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpg4P2GY
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => f69cf038593a695f09cf035d603e2c8b
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 10:48:03
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+        )
+
+    [$_FILES] => Array
+        (
+        )
+
+    [verification] => c516913aae41f296e67260757abdc917
+    [pathinfo] => 
+    [exts] => Array
+        (
+            [0] => 
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 10:51:34
+    [error] => 6
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 98839c24d251ec839c79559a4fabedb5
+            [name] => mainimage
+            [max_size] => 10485760
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/php4En0ng
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 98839c24d251ec839c79559a4fabedb5
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 11:02:01
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+        )
+
+    [$_FILES] => Array
+        (
+        )
+
+    [verification] => c516913aae41f296e67260757abdc917
+    [pathinfo] => 
+    [exts] => Array
+        (
+            [0] => 
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 11:05:11
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+        )
+
+    [$_FILES] => Array
+        (
+        )
+
+    [verification] => c516913aae41f296e67260757abdc917
+    [pathinfo] => 
+    [exts] => Array
+        (
+            [0] => 
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 11:10:06
+    [error] => success
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [verification] => 98839c24d251ec839c79559a4fabedb5
+            [name] => mainimage
+            [max_size] => 10485760
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpM6ra6I
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 98839c24d251ec839c79559a4fabedb5
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 11:14:53
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+        )
+
+    [$_FILES] => Array
+        (
+        )
+
+    [verification] => c516913aae41f296e67260757abdc917
+    [pathinfo] => 
+    [exts] => Array
+        (
+            [0] => 
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 11:15:09
+    [error] => success
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [max_size] => 10485760
+            [verification] => 32a3eb6eb6dcd8bb59934c9100e787aa
+            [name] => additionalimages0
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpCzIS0c
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => 32a3eb6eb6dcd8bb59934c9100e787aa
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 11:15:16
+    [error] => success
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [max_size] => 10485760
+            [verification] => ec64592c8e610071569a076bc3672546
+            [name] => additionalimages1
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/php7VXWzA
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => ec64592c8e610071569a076bc3672546
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 11:16:44
+    [error] => no sessiondata found
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [name] => additionalimages4
+            [max_size] => 10485760
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [verification] => d0cbb03e8cf956698fe293725959de3e
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpXwkKAK
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => d0cbb03e8cf956698fe293725959de3e
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 11:17:27
+    [error] => no sessiondata found
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [name] => additionalimages2
+            [max_size] => 10485760
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => jpeg,jpg,gif,png
+            [verification] => dc7d394e5d8ecd7f764681e4826f67db
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpj7ryPQ
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => dc7d394e5d8ecd7f764681e4826f67db
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 12:09:44
+    [error] => no sessiondata found
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => screenshot 2011-10-14 um 14.28.51.png
+            [file_types] => jpeg,jpg,gif,png
+            [verification] => dc7d394e5d8ecd7f764681e4826f67db
+            [max_size] => 1048576
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [name] => additionalimages2
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => screenshot 2011-10-14 um 14.28.51.png
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpUlBzZe
+                    [error] => 0
+                    [size] => 7049
+                )
+
+        )
+
+    [verification] => dc7d394e5d8ecd7f764681e4826f67db
+    [pathinfo] => png
+    [exts] => Array
+        (
+            [0] => jpeg
+            [1] => jpg
+            [2] => gif
+            [3] => png
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 12:16:09
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+            [max_size] => 10485760
+            [name] => movie
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [file_types] => flv
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 3
+                    [size] => 0
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 12:17:23
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [name] => movie
+            [max_size] => 10485760
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => flv
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 3
+                    [size] => 0
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 12:20:46
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [max_size] => 10485760
+            [name] => movie
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => flv
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 3
+                    [size] => 0
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-18 12:21:15
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [lookupid] => 2d3bb41eddd385e19e80bf7a4fbaba0b-4a98a936144b474a9aa59fb123750944
+            [max_size] => 10485760
+            [name] => movie
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => flv
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 3
+                    [size] => 0
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-19 13:44:03
+    [error] => no sessiondata found
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [lookupid] => d0f4574226cf61113eed2f1ac9a44428-04c707f194dbf1e62c832bc7d8c0375d
+            [max_size] => 10485760
+            [name] => movie
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => flv
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+            [Upload] => Submit Query
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpFvxZEF
+                    [error] => 0
+                    [size] => 3099611
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-19 14:31:35
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [lookupid] => d0f4574226cf61113eed2f1ac9a44428-04c707f194dbf1e62c832bc7d8c0375d
+            [max_size] => 10485760
+            [name] => movie
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => flv
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 3
+                    [size] => 0
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-19 14:40:55
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [lookupid] => d0f4574226cf61113eed2f1ac9a44428-04c707f194dbf1e62c832bc7d8c0375d
+            [max_size] => 10485760
+            [name] => movie
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => flv
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 3
+                    [size] => 0
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-19 14:41:41
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [lookupid] => d0f4574226cf61113eed2f1ac9a44428-04c707f194dbf1e62c832bc7d8c0375d
+            [max_size] => 10485760
+            [name] => movie
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => flv
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 3
+                    [size] => 0
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+
+Array
+(
+    [time] => 2011-10-19 14:42:40
+    [error] => 1
+    [$_GET] => Array
+        (
+            [eID] => tx_cabagextbase_flashupload
+        )
+
+    [$_POST] => Array
+        (
+            [Filename] => tagesschau.flv
+            [lookupid] => d0f4574226cf61113eed2f1ac9a44428-04c707f194dbf1e62c832bc7d8c0375d
+            [max_size] => 10485760
+            [name] => movie
+            [uploadsDir] => uploads/tx_cabagartprojects/
+            [file_types] => flv
+            [verification] => 50650eea95540ae8c54b97e09b7980a3
+        )
+
+    [$_FILES] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => tagesschau.flv
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 3
+                    [size] => 0
+                )
+
+        )
+
+    [verification] => 50650eea95540ae8c54b97e09b7980a3
+    [pathinfo] => flv
+    [exts] => Array
+        (
+            [0] => flv
+        )
+
+    [PATH_site] => /var/www/domains/dev.kultur-vermittlung.ch/
+)
+

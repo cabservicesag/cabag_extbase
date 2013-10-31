@@ -1,0 +1,2 @@
+# cat=basic//10; type=boolean; label=Disable flash upload eID.
+disableFlashUpload = 0

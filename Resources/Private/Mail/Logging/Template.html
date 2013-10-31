@@ -1,0 +1,33 @@
+{namespace c=Tx_CabagExtbase_ViewHelpers}<f:format.date format="Y-m-d H:i:s">now</f:format.date>
+<table>
+	<tr>
+		<th>
+			Severity
+		</th>
+		<th>
+			Tag
+		</th>
+		<th>
+			Message
+		</th>
+		<th>
+			Data
+		</th>
+	</tr>
+	<f:for each="{entries}" as="entry">
+		<tr>
+			<th>
+				[{entry.severity}] {entry.severityText}
+			</th>
+			<th>
+				{entry.tag}
+			</th>
+			<th>
+				{entry.message}
+			</th>
+			<th>
+				<f:if condition="{entry.data}"><c:debug>{entry.data}</c:debug></f:if>
+			</th>
+		</tr>
+	</f:for>
+</table>

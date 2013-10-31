@@ -1,0 +1,38 @@
+plugin.tx_cabagextbase {
+	persistence {
+		classes {
+			Tx_CabagExtbase_Domain_Model_StaticCountry {
+				newRecordStoragePid = 1
+				mapping {
+					tableName = static_countries
+				}
+			}
+			Tx_CabagExtbase_Domain_Model_StaticCountryZone {
+				newRecordStoragePid = 0
+				mapping {
+					tableName = static_country_zones
+				}
+			}
+			
+			Tx_CabagExtbase_Domain_Model_StaticLanguage {
+				newRecordStoragePid = 0
+				mapping {
+					tableName = static_languages
+				}
+			}
+		}
+	}
+}
+
+config.tx_extbase.persistence.classes.Tx_CabagExtbase_Domain_Model_StaticCountry < plugin.tx_cabagextbase.persistence.classes.Tx_CabagExtbase_Domain_Model_StaticCountry
+
+config.tx_extbase.persistence.classes.Tx_CabagExtbase_Domain_Model_StaticCountryZone < plugin.tx_cabagextbase.persistence.classes.Tx_CabagExtbase_Domain_Model_StaticCountryZone
+
+config.tx_extbase.persistence.classes.Tx_CabagExtbase_Domain_Model_StaticLanguage < plugin.tx_cabagextbase.persistence.classes.Tx_CabagExtbase_Domain_Model_StaticLanguage
+
+plugin.tx_cabagextbase._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+)

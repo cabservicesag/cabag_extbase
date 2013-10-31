@@ -1,0 +1,57 @@
+{namespace cabextbase=Tx_CabagExtbase_ViewHelpers}
+<div class="flashupload">
+	<input type="text" id="uid{uniqueID}"  class="filenameInput input text"  value="" name="tx_powermail_pi1[uid175]" readonly /><span id="spanButtonPlaceHolder"></span>
+	<div class="progressRow" id="progressRow_{uniqueID}">
+		<input id="cancelButton_{uniqueID}" type="button" class="submit cancelButton" value="{f:translate(key: 'flashupload.cancel')}" onclick="document.getElementById('progressRow_{uniqueID}').style.display = 'none'; swfu{uniqueID}.cancelQueue();" />
+		<div class="progressBar" id="progressBar_{uniqueID}">
+			<div class="progressSlider" id="progressSlider_{uniqueID}"></div>
+		</div>
+		<div class="progressPercentage" id="progressPercentage_{uniqueID}">0%</div>
+	</div>
+	<script type="text/javascript">
+		var swfu{uniqueID} = new SWFUpload({cabextbase:raw(raw: "{")}
+			flash_url : "{jsPath}swfupload/Flash/swfupload.swf",
+			upload_url: "/?eID=tx_cabagextbase_flashupload",
+			post_params: {cabextbase:raw(raw: "{")}
+				name: '{name}',
+				uploadsDir: '{config.uploadsDir}',
+				max_size: {config.maxFileSizeInBytes},
+				file_types: '{config.fileTypesRaw}',
+				verification: '{verification}',
+				lookupid: '{lookupid}'
+			{cabextbase:raw(raw: "}")},
+			file_size_limit : "{config.maxFileSizeReadable}",
+			file_types : "{config.fileTypes}",
+			file_types_description : "{config.fileTypes}",
+			file_upload_limit : {config.maxFileSizeInMB},
+			file_queue_limit : 20,
+			custom_settings : {cabextbase:raw(raw: "{")}
+				uid: '{uniqueID}',
+				cancelButtonId : "cancelButton_{uniqueID}"
+			{cabextbase:raw(raw: "}")},
+			debug: false,
+			
+			// Button settings
+			button_image_url: "{config.buttonBgImage}",
+			button_width: "{config.buttonWidth}",
+			button_height: "{config.buttonHeight}",
+			button_placeholder_id: "spanButtonPlaceHolder",
+			button_text: '<span class="bigfile_button">{f:translate(key: "flashupload.browse")}</span>',
+			button_text_style: '.bigfile_button {cabextbase:raw(raw: "{")} {config.buttonStyle} {cabextbase:raw(raw: "}")}',
+			button_text_left_padding: "{config.buttonPaddingLeft}",
+			button_text_top_padding: "{config.buttonPaddingTop}",
+			
+			// The event handler functions are defined in handlers.js
+			file_queued_handler : fileQueued,
+			file_queue_error_handler : fileQueueError,
+			file_dialog_complete_handler : fileDialogComplete,
+			upload_start_handler : uploadStart,
+			upload_progress_handler : uploadProgress,
+			upload_error_handler : uploadError,
+			upload_success_handler : uploadSuccess,
+			upload_complete_handler : uploadComplete,
+			queue_complete_handler : queueComplete	// Queue plugin event
+		{cabextbase:raw(raw: "}")});
+	</script>
+</div>
+

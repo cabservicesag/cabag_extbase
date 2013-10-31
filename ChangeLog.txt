@@ -1,0 +1,305 @@
+2013-10-08 Nils Blattner <nb@cabag.ch>
+	* version 0.6.8
+	* related issue #3752
+	* [FEATURE] code cleanup
+	*   => Rewrote Tx_CabagExtbase_Domain_Model_StaticLanguage->getCurrentLocalName()
+	* [BUG] fixed several security concerns
+	*   => replaced Resources/Public/JavaScript/swfupload/Flash/swfupload.swf with wordpress version from http://wordpress.org/download/
+
+2013-09-27 Michael Bossart <mb@cabag.ch>
+	* version 0.6.7
+	* added Viewhelper for images with lazyloading
+
+2013-09-24 Nils Blattner <nb@cabag.ch>
+	* version 0.6.6
+	* [BUG] changed pass by ref to pass by value in Tx_CabagExtbase_Utility_Mail::assign()
+
+2013-09-23 Nils Blattner <nb@cabag.ch>
+	* version 0.6.5
+	* [FEATURE] added an option renderArgumentsAsHidden to the FormViewHelper
+
+2013-09-12 Tizian Schmidlin <st@cabag.ch>
+	* version 0.6.4
+	* [FEATURE] added Classes/ViewHelpers/Format/HtmlViewHelper.php which supports cabag_langlinks
+
+2013-08-22 Massimo Lepore <ml@cabag.ch>
+	* version 0.6.3
+	* [BUG] fixed Classes/Validator/BoundNotEmptyValidator.php and removed typo.
+
+2013-08-22 Nils Blattner <nb@cabag.ch>
+	* version 0.6.2
+	* [FEATURE] added Classes/Validator/BoundNotEmptyValidator.php to autoload
+
+2013-08-20 Nils Blattner <nb@cabag.ch>
+	* version 0.6.1
+	* [FEATURE] added Classes/Validator/BoundNotEmptyValidator.php
+
+2013-08-13 Nils Blattner <nb@cabag.ch>
+	* version 0.6.0
+	* [BUG] fixed Classes/Utility/Logging.php so writeX functions are only executed when there are actual messages for this type
+
+2013-07-01 Nils Blattner <nb@cabag.ch>
+	* version 0.5.9
+	* [FEATURE] added new ViewHelper: Classes/ViewHelpers/SelectViewHelper.php
+	* allows to define a default option
+
+2013-03-08 Dimitri König <dk@cabag.ch>
+	* version 0.5.8
+	* [SECURITY] patched CabagTypo3DbBackend -> https://review.typo3.org/#/c/18721/
+
+2013-01-30 Nils Blattner <nb@cabag.ch>
+	* version 0.5.7
+	* changed Classes/Utility/Logging.php so that it uses swiftmailer
+	* changed Classes/Utility/Logging.php to fix an issue where microseconds are not displayed properly
+
+2013-01-16 Nils Blattner <nb@cabag.ch>
+	* version 0.5.6
+	* extended Classes/ViewHelpers/ImplodeViewHelper.php to allow the given array to be sorted
+
+2012-12-05 Nils Blattner <nb@cabag.ch>
+	* version 0.5.5
+	* fixed an issue with the devlog handler, where severity OK was not translated properly
+
+2012-12-05 Nils Blattner <nb@cabag.ch>
+	* version 0.5.4
+	* added the option to log into flashMessageContainer for extbase
+
+2012-12-03 Nils Blattner <nb@cabag.ch>
+	* version 0.5.3
+	* rewrote a section of the DatepickerViewHelper
+
+2012-12-03 Florian Mast <fm@cabag.ch>
+	* version 0.5.2
+	* added configuration options for the DatepickerViewHelper
+
+2012-11-14 Nils Blattner <nb@cabag.ch>
+	* version 0.5.1
+	* added missing % for the default date format in the date2cal viewhelper
+
+2012-11-14 Nils Blattner <nb@cabag.ch>
+	* version 0.5.0
+	* added the possibility to overwrite the date format in the date2cal viewhelper
+
+2012-11-13 Nils Blattner <nb@cabag.ch>
+	* version 0.4.9
+	* added getter/setter for writeSeverity and defaultTag in Tx_CabagExtbase_Utility_Logging
+	* changed Tx_CabagExtbase_Utility_Mail so that the controller context is optional
+	* added Tx_cabagExtbase_ViewHelpers_DebugViewHelper
+
+2012-11-09 Nils Blattner <nb@cabag.ch>
+	* version 0.4.8
+	* implemented several features in Tx_CabagExtbase_Utility_Logging
+
+2012-11-08 Nils Blattner <nb@cabag.ch>
+	* version 0.4.7
+	* added Tx_CabagExtbase_Utility_Logging class
+
+2012-10-22 Nils Blattner <nb@cabag.ch>
+	* version 0.4.6
+	* fixed a bug when no proper date was given in strftime viewhelper
+
+2012-10-12 Nils Blattner <nb@cabag.ch>
+	* version 0.4.5
+	* finished DatepickerViewHelper
+
+2012-10-11 Florian Mast <fm@cabag.ch>
+	* version 0.4.4
+	* added DatepickerViewHelper
+
+2012-07-20 Nils Blattner <nb@cabag.ch>
+	* version 0.4.3
+	* added the field $lastException to the BaseController, thats filled with the last exception.
+
+2012-07-20 Nils Blattner <nb@cabag.ch>
+	* version 0.4.2
+	* added readme for "plugin.tx_myext.settings.addExceptionToFlashMessage" and "plugin.tx_myext.settings.addStackTraceToFlashMessage"
+
+2012-07-20 Nils Blattner <nb@cabag.ch>
+	* version 0.4.1
+	* added new TS options to the base controller: "plugin.tx_myext.settings.addExceptionToFlashMessage" and "plugin.tx_myext.settings.addStackTraceToFlashMessage"
+
+2012-06-27 Nils Blattner <nb@cabag.ch>
+	* version 0.4.0
+	* added callActionMethod() overwrite to Tx_CabagExtbase_Controller_BaseController
+	* if the controller extends this, a new option in typoscript is available: "plugin.tx_myext.settings.exceptionAction"
+
+2012-05-20 Nils Blattner <nb@cabag.ch>
+	* version 0.3.9
+	* added ensureLogin function to Tx_CabagExtbase_Controller_BaseController
+
+2012-04-30 Nils Blattner <nb@cabag.ch>
+	* version 0.3.8
+	* added Tx_CabagExtbase_ViewHelpers_FormViewHelper
+
+2012-04-26 Nils Blattner <nb@cabag.ch>
+	* version 0.3.7
+	* added Tx_CabagExtbase_Controller_BaseController
+
+2012-04-24 Nils Blattner <nb@cabag.ch>
+	* version 0.3.6
+	* fixed a bug in tx_CabagExtbase_Utility_AbstractWizicon where the wizard would produce an invalid plugin
+
+2012-04-05 Tizian Schmidlin <st@cabag.ch>
+	* version 0.3.5
+	* added a fallback for the datetime viewhelper so that if the creation of a datetime element fails (i.e. because it's a timestamp), a new one is created and then the timestamp is set.
+
+2012-02-29 Nils Blattner <nb@cabag.ch>
+	* version 0.3.4
+	* added Tx_CabagExtbase_ViewHelpers_EscapeViewHelper that allows certain html entities to pass through
+
+2012-02-10 Nils Blattner <nb@cabag.ch>
+	* version 0.3.3
+	* added tx_CabagExtbase_Utility_AbstractWizicon to make it easy to add wizicons for plugins
+
+2012-02-08 Tizian Schmidlin <st@cabag.ch>
+	* version 0.3.2
+	* added replace support for ordering statement in Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend::parseOrderings
+
+2012-02-03 Nils Blattner <nb@cabag.ch>
+	* version 0.3.1
+	* added readme of pregReplace view helper
+
+2012-02-03 Nils Blattner <nb@cabag.ch>
+	* version 0.3.0
+	* changed some copyright notices in the viewhelpers
+
+2012-02-03 Nils Blattner <nb@cabag.ch>
+	* version 0.2.9
+	* added implode viewhelper
+
+2012-02-03 Tizian Schmidlin <st@cabag.ch>
+	* version 0.2.8
+	* added preg_replace viewhelper
+
+2012-01-25 Nils Blattner <nb@cabag.ch>
+	* version 0.2.7
+	* Mails sent with swiftmailer no longer send to "" <email@example.com> when using just emails, but use "email@example.com" <email@example.com>
+	* added the possibility to add the emails as an array of 'email@example.com' => 'Some Name' tuples. This only works when using swiftmailer to send mails!
+
+2012-01-25 Nils Blattner <nb@cabag.ch>
+	* version 0.2.6
+	* updated README.txt
+
+2012-01-24 Nils Blattner <nb@cabag.ch>
+	* version 0.2.5
+	* added some minor features to Tx_CabagExtbase_Utility_Mail (like proper reset, returning $this for chaining etc.)
+	* merged some files from another branch into this
+	* !!!! Reminder: DO NOT EVER ADD STUFF IF YOU ARE NOT SURE WHETHER YOU ARE WORKING ON THE ABSOLUTE LATEST VERSION !!!!
+
+	2011-08-31 Sonja Scholz <sonja.scholz@typo3.org>
+		* Version 0.1.9
+		* Mail - changed sendMail function, support comma separated list of recipients in swiftmailer
+	
+	2011-08-29 Sonja Scholz <sonja.scholz@typo3.org>
+		* Version 0.1.8
+		* ViewHelpers - added new ViewHelper Date2Cal
+	
+	2011-08-26 Sonja Scholz <sonja.scholz@typo3.org>
+		* Version 0.1.7
+		* Mail - added function addAttachment() to add attachments to the email
+		* Mail - changed function sendMail() to add attachments to t3lib_html object if attachments available
+		* Mail - added function setUseSwiftmailer() and getUseSwiftmailer() to make it possible to use swiftmailer class
+		* Mail - changed function sendMail() to use swiftMailer class if activated
+
+2012-01-03 Nils Blattner <nb@cabag.ch>
+	* version 0.2.4
+	* added ObjectAccessorViewHelper
+
+2012-01-03 Nils Blattner <nb@cabag.ch>
+	* version 0.2.3
+	* added StrftimeViewHelper
+
+2011-12-06 Nils Blattner <nb@cabag.ch>
+	* version 0.2.2
+	* fixed an issue with Tx_CabagExtbase_Persistence_Repository in 4.5.X
+
+2011-11-25 Tizian Schmidlin <st@cabag.ch>
+	* version 0.2.1
+	* added bugfixes from J+M for the countryzone model
+	* added new storage CabagTypo3DbBackend.php which improves the sorting and the counting
+
+2011-11-03 Dimitri König <dk@cabag.ch>
+	* version 0.2.0
+	* added flash upload
+
+2011-10-06 Tizian Schmidlin <st@cabag.ch>
+	* version 0.1.9
+	* fixed an error in statc language model
+
+2011-09-23 Tizian Schmidlin <st@cabag.ch>
+	* version 0.1.8
+	* created repository for static_language
+	* created model for static_languages
+
+2011-09-21 Tizian Schmidlin <st@cabag.ch>
+	* version 0.1.7
+	* created repository for static country zones
+	* created model for static country zones
+	
+2011-08-09 Dimitri König <dk@cabag.ch>
+	* version 0.1.6
+	* fixed bug IfContains viewhelper
+	* removed unnecessary custom actioncontroller
+
+2011-07-15 Dimitri König <dk@cabag.ch>
+	* version 0.1.5
+	* some refactoring on IfContains Viewhelper
+	* added Readme Info for IfContains Viewhelper
+
+2011-07-15 Dimitri König <dk@cabag.ch>
+	* version 0.1.4
+	* extended IfContains ViewHelper to search values from an array in an array
+
+2011-07-12 Dimitri König <dk@cabag.ch>
+	* version 0.1.3
+	* fixed GPMapping Bug in ActionController -> now arrays get mapped too
+
+2011-07-11 Dimitri König <dk@cabag.ch>
+	* Version 0.1.2
+	* added IfContains ViewHelper
+	* added ActionController with Get/Post Vars Mapping Feature
+
+2011-07-11 Nils Blattner <nb@cabag.ch>
+	* Version 0.1.1
+	* changed Classes/Utility/File.php - changed it so that by default all filenames are accepted and changed so they can be stored
+
+2011-06-30 Nils Blattner <nb@cabag.ch>
+	* Version 0.1.0
+	* added some information to the Readme.txt
+
+2011-06-29 Nils Blattner <nb@cabag.ch>
+	* Version 0.0.9
+	* changed Classes/Utility/Mail.php - new function sendMail() that allows to send mails as html mails
+
+2011-06-27 Nils Blattner <nb@cabag.ch>
+	* Version 0.0.8
+	* added Classes/ViewHelpers/JsonViewHelper.php - renders a given value as json array
+
+2011-06-22 Nils Blattner <nb@cabag.ch>
+	* Version 0.0.7
+	* added Classes/ViewHelpers/IfErrorViewHelper.php - Renders the content in case a form error occured for the selected property
+	* added Classes/Validator/TwiceValidator.php - allows to make sure two properties are equal
+
+2011-06-20 Nils Blattner <nb@cabag.ch>
+	* Version 0.0.6
+	* Added UTF-8 filesystem capability to the Classes/Utility/File.php
+
+2011-04-26 Sonja Scholz <ss@cabag.ch>
+	* Version 0.0.5
+	* added utility classes Mail and File from cabag_extbase 0.0.2
+
+2011-01-27 Nils Blattner <nb@cabag.ch>
+	* version 0.0.4
+	* added autoload for CData- and RawViewHelpers
+	* added README.txt
+
+2010-11-23 Nils Blattner <nb@cabag.ch>
+	* version 0.0.3
+	* added CData- and RawViewHelpers
+
+2010-10-21 Michael Bossart <mb@cabag.ch>
+	* added methods getLargeFlagPath, getMediumFlagPath, getSmallFlagPath and getTinyFlagPath to /Classes/Domain/Model/StaticCoutry.php
+
+2010-09-27 Jonas Duebi <jd@cabag.ch>
+	* Version 0.0.2
+	* Created Changelog -> Was missing :-(

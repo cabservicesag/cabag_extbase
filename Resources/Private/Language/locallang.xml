@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Extbase Library extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pager.first">first</label>
+			<label index="pager.last">last</label>
+			<label index="pager.previous">previous</label>
+			<label index="pager.next">next</label>
+			<label index="pager.current">Page</label>
+			<label index="pager.more">...</label>
+			<label index="pager.jumptoTitle">Enter a number and hit enter to jump to a page directly</label>
+			<label index="flashupload.cancel">Cancel</label>
+			<label index="flashupload.browse">Browse</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="pager.first">erste</label>
+			<label index="pager.last">letzte</label>
+			<label index="pager.previous">zurück</label>
+			<label index="pager.next">weiter</label>
+			<label index="pager.current">Seite</label>
+			<label index="pager.more">...</label>
+			<label index="pager.jumptoTitle">Geben Sie eine Zahl ein und drücken Sie Enter um direkt auf eine Seite zu springen</label>
+			<label index="flashupload.cancel">Abbrechen</label>
+			<label index="flashupload.browse">Durchsuchen</label>
+		</languageKey>
+	</data>
+</T3locallang>
