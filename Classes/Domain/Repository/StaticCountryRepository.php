@@ -45,4 +45,3 @@ class Tx_CabagExtbase_Domain_Repository_StaticCountryRepository extends Tx_Cabag
 		$this->setQuerySettings($querySettings);
 	}
 }
-?>

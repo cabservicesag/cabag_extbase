@@ -35,6 +35,18 @@ class Tx_CabagExtbase_Validator_BoundNotEmptyValidator extends Tx_Extbase_Valida
 	protected static $info = array();
 	
 	/**
+	 * This contains the supported options, their default values, types and descriptions.
+	 *
+	 * @var array
+	 */
+	protected $supportedOptions = array(
+		'key' => array('', 'The key to validate', 'string', TRUE), 
+		'total' => array('', 'The total amount', 'string', TRUE), 
+		'minimum' => array('', 'The  minimum amount', 'string', TRUE)
+	);
+	
+	
+	/**
 	 * Returns TRUE, the minimum amount of fields is non empty.
 	 *
 	 * If total is 5 (in total 5 fields are bound this way) and at least 2 must be non-empty, but in effect all are empty, only the last two called fields will return an error.
@@ -67,4 +79,3 @@ class Tx_CabagExtbase_Validator_BoundNotEmptyValidator extends Tx_Extbase_Valida
 	}
 }
 
-?>

@@ -313,4 +313,3 @@ class Tx_CabagExtbase_Domain_Model_StaticLanguage extends Tx_Extbase_DomainObjec
 		return $this->lgNameEn;
 	}
 }
-?>

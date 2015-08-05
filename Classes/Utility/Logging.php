@@ -234,11 +234,11 @@ class Tx_CabagExtbase_Utility_Logging {
 		$now = microtime(true);
 		$severity = intval($severity);
 		$entry = array(
-			'message' => $message,
+			'message' => (string)$message,
 			'severity' => $severity,
 			'severityText' => $this->getSeverityTypeText($severity),
 			'data' => $data,
-			'tag' => ($tag === null ? $this->defaultTag : $tag),
+			'tag' => ($tag === null ? $this->defaultTag : (string)$tag),
 			'time' => $now
 		);
 		
@@ -450,7 +450,7 @@ class Tx_CabagExtbase_Utility_Logging {
 		foreach ($entries as $entry) {
 			$severity = min(floor(max(intval($entry['severity']), 0) / 100), 4) - 2;
 			
-			$container->add($entry['message'], $entry['tag'], $severity);
+			$container->add((string)$entry['message'], $entry['tag'], $severity);
 		}
 		return true;
 	}
@@ -478,4 +478,3 @@ class Tx_CabagExtbase_Utility_Logging {
 		return self::$severityText[$severity];
 	}
 }
-?>

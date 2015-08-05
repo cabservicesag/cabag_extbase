@@ -48,4 +48,3 @@ class Tx_CabagExtbase_ViewHelpers_JsonViewHelper extends Tx_Fluid_Core_ViewHelpe
 	}
 }
 
-?>

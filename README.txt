@@ -143,9 +143,12 @@ ViewHelpers:
 
 - Tx_CabagExtbase_ViewHelpers_FormViewHelper
 	Adds several options to the default form viewhelper
-	<c:form method="GET"... dontRenderHmac="1" dontRenderReferrer="1"...></c:form>
-	- renderArgumentsAsHidden takes the GET parameters of the action and renders them as hidden fields at the top of the form
+	<c:form method="GET"... dontRenderHmac="1" dontRenderReferrer="1" dontRenderTrusted="1" ...></c:form>
 	<c:form method="POST"... renderArgumentsAsHidden="1"...></c:form>
+	- dontRenderReferrer: If set supresses rendering of the referrer information
+	- dontRenderHmac: If set supresses rendering of the hmac information
+	- dontRenderTrusted: If set supresses rendering of the __trustedProperties information
+	- renderArgumentsAsHidden takes the GET parameters of the action and renders them as hidden fields at the top of the form
 
 - Tx_CabagExtbase_ViewHelpers_DebugViewHelper
 	Does and works the same as <f:debug>{bla}</f:debug> but instead also works the same in a backend module.
@@ -153,6 +156,11 @@ ViewHelpers:
 - Tx_CabagExtbase_ViewHelpers_SelectViewHelper
 	Adds several options to the default select viewhelper
 	<c:select property="topic" options="{topics}" optionLabelField="title" emptyOption="{f:translate(key: 'form.topics.empty')}" emptyOptionValue="0" />
+
+- Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper
+	Renders a link from a standard typolink-field. Works for internal, external, mailto and file links.
+	{namespace c=Tx_CabagExtbase_ViewHelpers}
+	<c:TypoLink link="{linkfield}">...</c:TypoLink>
 
 Validators:
 -----------
@@ -317,3 +325,10 @@ Utility:
 			return $wizardItems;
 		}
 	}
+
+- Tx_CabagExtbase_Utility_FixFormToken
+	Creates backend module links that are sendable via mail or other channels.
+	For that it removes the moduleToken (which contains information about the current session) and creates a session independant token.
+	$fixFormUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_CabagExtbase_Utility_FixFormToken');
+	$independantLink = $fixFormUtility->fixLink($moduleLink);
+	$relativeIndependantLink = $fixFormUtility->fixLink($moduleLink, false);

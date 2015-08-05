@@ -72,4 +72,3 @@ class Tx_CabagExtbase_ViewHelpers_Format_HtmlViewHelper extends Tx_Fluid_ViewHel
 	}
 }
 
-?>

@@ -202,4 +202,3 @@ class Tx_CabagExtbase_ViewHelpers_DatepickerViewHelper extends Tx_Fluid_ViewHelp
 		return parent::render($required, $type);
 	}
 }
-?>

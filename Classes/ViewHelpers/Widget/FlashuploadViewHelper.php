@@ -53,4 +53,3 @@ class Tx_CabagExtbase_ViewHelpers_Widget_FlashuploadViewHelper extends Tx_Fluid_
 		return $this->initiateSubRequest();
 	}
 }
-?>

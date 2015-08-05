@@ -80,4 +80,3 @@ class Tx_CabagExtbase_ViewHelpers_IfContainsViewHelper extends Tx_Fluid_Core_Vie
     }
 }
 
-?>

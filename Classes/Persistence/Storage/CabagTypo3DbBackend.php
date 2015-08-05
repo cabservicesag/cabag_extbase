@@ -238,4 +238,3 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends Tx_Extbase
 	}
 }
 
-?>

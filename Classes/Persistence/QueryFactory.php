@@ -56,4 +56,3 @@ class Tx_CabagExtbase_Persistence_QueryFactory extends Tx_Extbase_Persistence_Qu
 		return $query;
 	}
 }
-?>

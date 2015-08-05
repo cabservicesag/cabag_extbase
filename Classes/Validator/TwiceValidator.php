@@ -35,6 +35,15 @@ class Tx_CabagExtbase_Validator_TwiceValidator extends Tx_Extbase_Validation_Val
 	protected static $values = array();
 	
 	/**
+	 * This contains the supported options, their default values, types and descriptions.
+	 *
+	 * @var array
+	 */
+	protected $supportedOptions = array(
+		'key' => array('', 'The key to validate', 'string', TRUE),
+	);
+	
+	/**
 	 * Returns TRUE, if two consecutive values match.
 	 *
 	 * Always returns true for the first value.
@@ -62,4 +71,3 @@ class Tx_CabagExtbase_Validator_TwiceValidator extends Tx_Extbase_Validation_Val
 	}
 }
 
-?>

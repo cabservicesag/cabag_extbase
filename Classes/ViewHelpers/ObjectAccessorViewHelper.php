@@ -62,4 +62,3 @@ class Tx_CabagExtbase_ViewHelpers_ObjectAccessorViewHelper extends Tx_Fluid_Core
 	}
 }
 
-?>

@@ -54,4 +54,3 @@ class Tx_CabagExtbase_ViewHelpers_RawViewHelper extends Tx_Fluid_Core_ViewHelper
 }
 
 
-?>

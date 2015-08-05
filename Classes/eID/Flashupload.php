@@ -218,4 +218,3 @@ class Tx_CabagExtbase_eID_Flashupload {
 $uploader = new Tx_CabagExtbase_eID_Flashupload();
 $uploader->move();
 
-?>

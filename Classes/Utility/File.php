@@ -232,4 +232,3 @@ class Tx_CabagExtbase_Utility_File {
 
 }
 
-?>

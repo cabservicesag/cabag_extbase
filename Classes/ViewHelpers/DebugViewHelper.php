@@ -44,4 +44,3 @@ class Tx_CabagExtbase_ViewHelpers_DebugViewHelper extends Tx_Fluid_Core_ViewHelp
 }
 
 
-?>

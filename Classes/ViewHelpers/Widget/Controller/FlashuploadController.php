@@ -74,4 +74,3 @@ class Tx_CabagExtbase_ViewHelpers_Widget_Controller_FlashuploadController extend
 	}
 }
 
-?>

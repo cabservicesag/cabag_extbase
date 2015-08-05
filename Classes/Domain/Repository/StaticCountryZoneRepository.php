@@ -59,4 +59,3 @@ class Tx_CabagExtbase_Domain_Repository_StaticCountryZoneRepository extends Tx_C
 		return $query->execute();
 	}
 }
-?>

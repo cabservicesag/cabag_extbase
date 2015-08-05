@@ -44,4 +44,3 @@ class Tx_CabagExtbase_ViewHelpers_PregReplaceViewHelper extends Tx_Fluid_Core_Vi
 		return preg_replace($from, $to, $this->renderChildren());
 	}
 }
-?>

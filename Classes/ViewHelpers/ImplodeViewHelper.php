@@ -91,4 +91,3 @@ class Tx_CabagExtbase_ViewHelpers_ImplodeViewHelper extends Tx_Fluid_Core_ViewHe
 	}
 }
 
-?>

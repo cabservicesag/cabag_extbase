@@ -108,4 +108,3 @@ class Tx_CabagExtbase_Controller_BaseController extends Tx_Extbase_MVC_Controlle
 		}
 	}
 }
-?>

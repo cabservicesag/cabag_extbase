@@ -42,6 +42,3 @@ class Tx_CabagExtbase_ViewHelpers_CdataViewHelper extends Tx_Fluid_Core_ViewHelp
 		return '<![CDATA[' . $this->renderChildren() . ']]>';
 	}
 }
-
-
-?>

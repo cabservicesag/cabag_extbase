@@ -52,9 +52,10 @@ class Tx_CabagExtbase_ViewHelpers_FormViewHelper extends Tx_Fluid_ViewHelpers_Fo
 	 * @return void
 	 */
 	public function initializeArguments() {
-		$this->registerTagAttribute('dontRenderReferrer', 'boolean', 'If set supresses rendering of the referrer information');
-		$this->registerTagAttribute('dontRenderHmac', 'boolean', 'If set supresses rendering of the hmac information');
-		$this->registerTagAttribute('renderArgumentsAsHidden', 'boolean', 'If set, the GET parameters of the action will also be rendered as hidden fields');
+		$this->registerArgument('dontRenderReferrer', 'boolean', 'If set supresses rendering of the referrer information');
+		$this->registerArgument('dontRenderHmac', 'boolean', 'If set supresses rendering of the hmac information');
+		$this->registerArgument('dontRenderTrusted', 'boolean', 'If set supresses rendering of the __trustedProperties information');
+		$this->registerArgument('renderArgumentsAsHidden', 'boolean', 'If set, the GET parameters of the action will also be rendered as hidden fields');
 		
 		parent::initializeArguments();
 	}
@@ -67,7 +68,7 @@ class Tx_CabagExtbase_ViewHelpers_FormViewHelper extends Tx_Fluid_ViewHelpers_Fo
 	 * @todo filter out referrer information that is equal to the target (e.g. same packageKey)
 	 */
 	protected function renderHiddenReferrerFields() {
-		if ($this->arguments->hasArgument('dontRenderReferrer') && !empty($this->arguments['dontRenderReferrer'])) {
+		if ((is_array($this->arguments) || $this->arguments->hasArgument('dontRenderReferrer')) && !empty($this->arguments['dontRenderReferrer'])) {
 			return '';
 		}
 		return parent::renderHiddenReferrerFields();
@@ -80,7 +81,7 @@ class Tx_CabagExtbase_ViewHelpers_FormViewHelper extends Tx_Fluid_ViewHelpers_Fo
 	 * @author Sebastian Kurfürst <sebastian@typo3.org>
 	 */
 	protected function renderRequestHashField() {
-		if ($this->arguments->hasArgument('dontRenderHmac') && !empty($this->arguments['dontRenderHmac'])) {
+		if ((is_array($this->arguments) || $this->arguments->hasArgument('dontRenderHmac')) && !empty($this->arguments['dontRenderHmac'])) {
 			return '';
 		}
 		return parent::renderRequestHashField();
@@ -93,12 +94,12 @@ class Tx_CabagExtbase_ViewHelpers_FormViewHelper extends Tx_Fluid_ViewHelpers_Fo
 	 *
 	 * @return mixed The finally rendered child nodes.
 	 */
-	protected function renderChildren() {
+	public function renderChildren() {
 		$hiddenContent = '';
 		
-		if ($this->arguments->hasArgument('renderArgumentsAsHidden') && !empty($this->arguments['renderArgumentsAsHidden'])) {
+		if ((is_array($this->arguments) || $this->arguments->hasArgument('renderArgumentsAsHidden')) && !empty($this->arguments['renderArgumentsAsHidden'])) {
 			$uri = '';
-			if ($this->arguments->hasArgument('actionUri')) {
+			if ((is_array($this->arguments) && isset($this->arguments['actionUri'])) || (is_object($this->arguments) && $this->arguments->hasArgument('actionUri'))) {
 				$uri = $this->arguments['actionUri'];
 			} else {
 				$uri = 'a?' . http_build_query($this->controllerContext->getUriBuilder()->getLastArguments(), NULL, '&');
@@ -115,6 +116,17 @@ class Tx_CabagExtbase_ViewHelpers_FormViewHelper extends Tx_Fluid_ViewHelpers_Fo
 		}
 		return $hiddenContent . parent::renderChildren();
 	}
+
+	/**
+	 * Render the request hash field
+	 *
+	 * @return string The hmac field
+	 */
+	protected function renderTrustedPropertiesField() {
+		if ((is_array($this->arguments) || $this->arguments->hasArgument('dontRenderTrusted')) && !empty($this->arguments['dontRenderTrusted'])) {
+			return '';
+		}
+		return parent::renderTrustedPropertiesField();
+	}
 }
 
-?>

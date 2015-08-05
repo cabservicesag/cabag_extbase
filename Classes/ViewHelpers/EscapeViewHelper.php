@@ -87,4 +87,3 @@ class Tx_CabagExtbase_ViewHelpers_EscapeViewHelper extends Tx_Fluid_ViewHelpers_
 		return $result;
 	}
 }
-?>

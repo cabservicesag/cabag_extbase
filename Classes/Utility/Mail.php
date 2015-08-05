@@ -66,10 +66,15 @@ class Tx_CabagExtbase_Utility_Mail {
 	 * @param Tx_Extbase_MVC_Controller_ControllerContext $controllerContext The context to the calling controller.
 	 * @param string $filePath The path to the template file.
 	 * @param array $settings Typoscript setting array (optional).
+	 * @param string $optionalPlaintextPath The path to the addition plaintext template file (optional).
 	 * @return Tx_CabagExtbase_Utility_Mail The constructed mail utility class.
 	 */
-	public function __construct(Tx_Extbase_MVC_Controller_ControllerContext $controllerContext = null, $filePath, $settings = array()) {
-	 	$this->reset($controllerContext, $filePath, $settings);
+	public function __construct(Tx_Extbase_MVC_Controller_ControllerContext $controllerContext = null, $filePath, $settings = array(), $optionalPlaintextPath = '') {
+	 	$this->reset($controllerContext, $filePath, $settings, $optionalPlaintextPath);
+	 	
+	 	if (version_compare(TYPO3_version, '6.2', '>=')) {
+	 		$this->setUseSwiftmailer(true);
+	 	}
 	}
 	
 	/**
@@ -78,9 +83,10 @@ class Tx_CabagExtbase_Utility_Mail {
 	 * @param Tx_Extbase_MVC_Controller_ControllerContext $controllerContext The context to the calling controller.
 	 * @param string $filePath The path to the template file.
 	 * @param array $settings Typoscript setting array (optional).
+	 * @param string $optionalPlaintextPath The path to the addition plaintext template file (optional).
 	 * @return void
 	 */
-	public function reset(Tx_Extbase_MVC_Controller_ControllerContext $controllerContext = null, $filePath, $settings = array()) {
+	public function reset(Tx_Extbase_MVC_Controller_ControllerContext $controllerContext = null, $filePath, $settings = array(), $optionalPlaintextPath = '') {
 		if ($this->objectManager === null) {
 			// t3lib_singleton
 			$this->objectManager = t3lib_div::makeInstance('Tx_Extbase_Object_Manager');
@@ -100,6 +106,25 @@ class Tx_CabagExtbase_Utility_Mail {
 		$view->initializeView(); // In FLOW3, solved through Object Lifecycle methods, we need to call it explicitely
 		$view->assign('settings', $settings); // same with settings injection.
 		$this->view = $view;
+		
+		if($optionalPlaintextPath){
+			$plainTextView = $this->objectManager->getObject('Tx_Fluid_View_StandaloneView');
+			if ($controllerContext !== null) {
+				$plainTextView->setControllerContext($controllerContext);
+			}
+
+			// Template Path Override
+			$plainTextView->setTemplatePathAndFilename(t3lib_div::getFileAbsFileName($optionalPlaintextPath));
+
+			if (method_exists($plainTextView, 'injectSettings')) {
+				$plainTextView->injectSettings($settings);
+			}
+			$plainTextView->initializeView(); // In FLOW3, solved through Object Lifecycle methods, we need to call it explicitely
+			$plainTextView->assign('settings', $settings); // same with settings injection.
+			$this->plainTextView = $plainTextView;
+		}
+		
+		
 		$this->lastMessage = '';
 		
 		$this->useSwiftmailer = false;
@@ -116,7 +141,11 @@ class Tx_CabagExtbase_Utility_Mail {
 	 * @return Tx_Fluid_View_TemplateView The template, so calls can be chained.
 	 */
 	public function assign($key, $value) {
-		return $this->view->assign($key, $value);
+		$ret = $this->view->assign($key, $value);
+		if($this->plainTextView) {
+			$this->plainTextView->assign($key, $value);
+		}
+		return $ret;
 	}
 	
 	/**
@@ -139,6 +168,7 @@ class Tx_CabagExtbase_Utility_Mail {
 	 * @param string $fromEmail E-Mail to send from.
 	 * @param string $fromName Name to send from (optional, $fromEmail is used if not supplied).
 	 * @param boolean $htmlMail Whether or not to send the mail as a html mail.
+	 * @param boolean $htmlMail Whether or not to send the mail as a html mail.
 	 * @return boolean Whether or not the sending was successfull.
 	 */
 	public function sendMail($email = '', $subject = '', $fromEmail = '', $fromName = '', $htmlMail = false) {
@@ -148,6 +178,40 @@ class Tx_CabagExtbase_Utility_Mail {
 			$this->lastMessage = 'Error: ' . $e->getMessage();
 			return false;
 		}
+		
+		if($this->plainTextView) {
+			try {
+				$plaintextMessage = $this->plainTextView->render();
+				$additionalPlainText = true;
+			} catch (Exception $e) {
+				$this->lastMessage = 'Error: ' . $e->getMessage();
+				return false;
+			}
+		}
+		
+		
+		if (version_compare(TYPO3_version, '6.2', '>=')) {
+			$matches = array();
+			if (preg_match_all('#https?://[^\s]+#', $message, $matches, PREG_PATTERN_ORDER)) {
+				$fixFormTokenUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_CabagExtbase_Utility_FixFormToken');
+				
+				$replaces = array();
+				foreach ($matches[0] as $link) {
+					$replaces[] = $fixFormTokenUtility->fixLink($link);
+				}
+				$message = str_replace($matches[0], $replaces, $message);
+			}
+			if (preg_match_all('#https?://[^\s]+#', $plaintextMessage, $matches, PREG_PATTERN_ORDER)) {
+				$fixFormTokenUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_CabagExtbase_Utility_FixFormToken');
+				
+				$replaces = array();
+				foreach ($matches[0] as $link) {
+					$replaces[] = $fixFormTokenUtility->fixLink($link);
+				}
+				$plaintextMessage = str_replace($matches[0], $replaces, $plaintextMessage);
+			}
+		}
+		
 		$this->lastMessage = $message;
 		
 		// error handling
@@ -187,7 +251,10 @@ class Tx_CabagExtbase_Utility_Mail {
 				}
 			}
 			
-			if ($htmlMail) {
+			if($htmlMail && $additionalPlainText){
+				$mail->setBody($message, 'text/html');
+				$mail->addPart($plaintextMessage, 'text/plain');
+			} elseif ($htmlMail) {
 				$mail->setBody($message, 'text/html');
 			} else {
 				$mail->setBody($message, 'text/plain');
@@ -293,4 +360,3 @@ class Tx_CabagExtbase_Utility_Mail {
 	}
 	
 }
-?>

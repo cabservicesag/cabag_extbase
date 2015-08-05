@@ -64,4 +64,3 @@ class Tx_CabagExtbase_ViewHelpers_Date2CalViewHelper extends Tx_Fluid_Core_ViewH
 		return htmlspecialchars_decode($date2calCalendar);
 	}
 }
-?>

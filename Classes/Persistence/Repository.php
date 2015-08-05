@@ -80,4 +80,3 @@ class Tx_CabagExtbase_Persistence_Repository extends Tx_Extbase_Persistence_Repo
 	}
 
 }
-?>

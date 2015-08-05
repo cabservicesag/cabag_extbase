@@ -266,6 +266,7 @@ class Tx_CabagExtbase_Domain_Model_StaticCountryZone extends Tx_Extbase_DomainOb
 	
 	/**
 	 * the name of in the current localization
+	 * @var string
 	 */
 	protected $currentLocalName = '';
 	
@@ -297,4 +298,3 @@ class Tx_CabagExtbase_Domain_Model_StaticCountryZone extends Tx_Extbase_DomainOb
 		}
 	}
 }
-?>

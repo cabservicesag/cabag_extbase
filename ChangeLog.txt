@@ -1,3 +1,124 @@
+2015-07-29 Philip Liebel <ph@cabag.ch>
+	* version 0.9.5
+	* edited Classes/ViewHelpers/TypoLinkViewHelper.php: modified to display additionalAttributes from link string, working on issue #19750
+
+2015-07-07 Surena Golijani <sg@cabag.ch>
+	* version 0.9.4
+	* edited Classes/ViewHelpers/TypoLinkViewHelper.php: added parameter cutLinktext to display url without protocol as linktext, working on issue #13540
+
+2015-06-15 Philip Liebel <ph@cabag.ch>
+	* version 0.9.3
+	* edited Classes/ViewHelpers/TypoLinkViewHelper.php
+	* fixed redering of tel links
+	* added option to render links to access restricted pages
+	* fixed issue #15693
+	* fixed issue #17966
+	* included the following change from parallel version:
+
+2015-05-08 Michael Bossart <mb@cabag.ch>
+	** version 0.9.2.5
+	** edited TypoLink-Viewhelper, added posibility to add style-attribute
+
+2015-06-08 Surena Golijani <sg@cabag.ch>
+	* version 0.9.2
+	* edited Classes/ViewHelpers/TypoLinkViewHelper.php: set parameter returnUrl to returnPart working on issue #16379
+
+2015-05-03 Surena Golijani <sg@cabag.ch>
+	* version 0.9.1
+	* edited Classes/ViewHelpers/TypoLinkViewHelper.php: added parameter returnUrl to add option to return url only
+
+2015-04-23 Tizian Schmidlin <st@cabag.ch>
+	* version 0.9.0
+	* [Merged manually from parallel version] fixed issue when sending only plaintext messages
+
+2015-04-13 Michael Bossart <mb@cabag.ch>
+	* version 0.8.9
+	* fixed bugs in TypoLink-Viewhelper, added check if link to startpage, since no url is generated but link is valid
+
+2015-03-27 Michael Bossart <mb@cabag.ch>
+	* version 0.8.8
+	* fixed bugs in TypoLink-Viewhelper, added possibility to add a replacment HTML-tag when Link-URL can not be generated
+
+2015-03-10 Philip Liebel <ph@cabag.ch>
+	* version 0.8.7
+	* worked on issue #14623
+	* added option to Tx_CabagExtbase_Utility_Mail to send multipart mails with plaintext version
+
+2015-02-10 Michael Bossart <mb@cabag.ch>
+	* version 0.8.6
+	* fixed bugs in TypoLink-Viewhelper
+
+2015-02-09 Michael Bossart <mb@cabag.ch>
+	* version 0.8.5
+	* fixed bugs in TypoLink-Viewhelper
+
+2015-02-03 Tizian Schmidlin <st@cabag.ch>
+	* version 0.8.4
+	* [6.2] edited Classes/Utility/Mail.php, set useSwiftMailer = true in __construct when TYPO3 6.2+
+
+2015-01-30 Nils Blattner <nb@cabag.ch>
+	* version 0.8.3
+	* [6.2] edited Classes/TwiceValidator.php, added protected $supportedOptions
+
+2015-01-26 Mnauel Bloch <bm@cabag.ch>
+	* version 0.8.2
+	* edited Classes/BoundNotEmptyValidator.php, added protected $supportedOptions
+
+2015-01-22 Nils Blattner <nb@cabag.ch>
+	* version 0.8.1
+	* [BUG] fixed an issue that a flash message was generated when a module token did not validate correctly in Classes/Utility/FixFormToken.php
+
+2015-01-15 Michael Bossart <mb@cabag.ch>
+	* version 0.8.0
+	* added description for new viewhelper in README.txt
+
+2015-01-14 Michael Bossart <mb@cabag.ch>
+	* version 0.7.9
+	* added Viewhelper for general typolink-function
+
+2014-12-17 Nils Blattner <nb@cabag.ch>
+	* version 0.7.8
+	* [FEATURE] finished implementing the eID
+
+2014-12-16 Nils Blattner <nb@cabag.ch>
+	* version 0.7.7
+	* [TASK] removed closing tags
+	* [FEATURE] added an eID script, utility and fixed the mail class to redirect users over an eID into the backend if the link is sent via mail
+
+2014-10-28 Nils Blattner <nb@cabag.ch>
+	* version 0.7.6
+	* added dontRenderTrusted attribute to the form view helper
+	* changed it so the special attributes are no longer rendered to the tag
+
+2014-09-11 Michael Bossart <mb@cabag.ch>
+	* version 0.7.5
+	* added Viewhelper for if with OR condition
+
+2014-09-11 Tizian Schmidlin <st@cabag.ch>
+	* version 0.7.4
+	* [GENERAL COMPATIBILITY] added @var to currentLocalName
+
+2014-08-07 Nils Blattner <nb@cabag.ch>
+	* version 0.7.3
+	* [6.2] replaced 'readXMLLLfile' with 'readLLfile' in Classes/Utility/AbstractWizicon.php
+
+2014-08-07 Nils Blattner <nb@cabag.ch>
+	* version 0.7.2
+	* [6.2] changed calls to $this->arguments->hasArgument() FormViewHelper (works for 4.5 and 6.2 branches)
+	* [6.2] added migration code for Tx_Extbase_Object_Manager
+
+2014-08-04 Nils Blattner <nb@cabag.ch>
+	* version 0.7.1
+	* [6.2] changed visibility of renderChildren to public in FormViewHelper (works for 4.5 and 6.2 branches)
+
+2014-02-04 Michael Bossart <mb@cabag.ch>
+	* version 0.7.0
+	* added Viewhelper for link with data-height and data-width attributes
+
+2014-01-29 Nils Blattner <nb@cabag.ch>
+	* version 0.6.9
+	* [BUG] fixed an issue when the logging receives a non-string message
+
 2013-10-08 Nils Blattner <nb@cabag.ch>
 	* version 0.6.8
 	* related issue #3752

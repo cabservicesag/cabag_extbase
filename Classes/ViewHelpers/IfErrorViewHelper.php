@@ -77,4 +77,3 @@ class Tx_CabagExtbase_ViewHelpers_IfErrorViewHelper extends Tx_Fluid_Core_ViewHe
 	}
 }
 
-?>

@@ -613,7 +613,4 @@ class Tx_CabagExtbase_Domain_Model_StaticCountry extends Tx_Extbase_DomainObject
 		
 		return $relativeFlagPath;
 	}
-
-	
 }
-?>

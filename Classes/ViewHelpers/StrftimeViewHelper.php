@@ -69,4 +69,3 @@ class Tx_CabagExtbase_ViewHelpers_StrftimeViewHelper extends Tx_Fluid_Core_ViewH
 		return strftime($format, $date->format('U'));
 	}
 }
-?>

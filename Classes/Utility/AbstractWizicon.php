@@ -75,7 +75,7 @@ abstract class tx_CabagExtbase_Utility_AbstractWizicon {
 		$extensionKey = $this->getExtensionKey();
 		if (!isset(self::$localLang[$extensionKey])) {
 			$file = t3lib_extMgm::extPath($extensionKey) . 'Resources/Private/Language/locallang_db.xml';
-			self::$localLang[$extensionKey] = t3lib_div::readLLXMLfile($file, $GLOBALS['LANG']->lang);
+			self::$localLang[$extensionKey] = t3lib_div::readLLfile($file, $GLOBALS['LANG']->lang);
 		}
 		
 		return $GLOBALS['LANG']->getLLL($key, self::$localLang[$extensionKey]);
@@ -111,4 +111,3 @@ abstract class tx_CabagExtbase_Utility_AbstractWizicon {
 		return t3lib_extMgm::extRelPath($this->getExtensionKey()) . 'Resources/Public/Icons/Wizicon_' . $pluginSignature . '.gif';
 	}
 }
-?>

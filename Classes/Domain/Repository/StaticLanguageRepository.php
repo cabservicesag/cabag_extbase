@@ -45,4 +45,3 @@ class Tx_CabagExtbase_Domain_Repository_StaticLanguageRepository extends Tx_Caba
 		$this->setQuerySettings($querySettings);
 	}
 }
-?>

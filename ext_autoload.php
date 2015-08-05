@@ -3,7 +3,7 @@
 // This file was generated on 2013-09-12 14:56
 
 $extensionPath = t3lib_extMgm::extPath('cabag_extbase');
-return array(
+$classes = array(
 	'tx_cabagextbase_controller_basecontroller' => $extensionPath . 'Classes/Controller/BaseController.php',
 	'tx_cabagextbase_domain_model_staticcountry' => $extensionPath . 'Classes/Domain/Model/StaticCountry.php',
 	'tx_cabagextbase_domain_model_staticcountryzone' => $extensionPath . 'Classes/Domain/Model/StaticCountryZone.php',
@@ -11,6 +11,7 @@ return array(
 	'tx_cabagextbase_domain_repository_staticcountryrepository' => $extensionPath . 'Classes/Domain/Repository/StaticCountryRepository.php',
 	'tx_cabagextbase_domain_repository_staticcountryzonerepository' => $extensionPath . 'Classes/Domain/Repository/StaticCountryZoneRepository.php',
 	'tx_cabagextbase_domain_repository_staticlanguagerepository' => $extensionPath . 'Classes/Domain/Repository/StaticLanguageRepository.php',
+	'tx_cabagextbase_object_manager' => $extensionPath . 'Classes/Object/Manager.php',
 	'tx_cabagextbase_persistence_queryfactory' => $extensionPath . 'Classes/Persistence/QueryFactory.php',
 	'tx_cabagextbase_persistence_repository' => $extensionPath . 'Classes/Persistence/Repository.php',
 	'tx_cabagextbase_persistence_storage_cabagtypo3dbbackend' => $extensionPath . 'Classes/Persistence/Storage/CabagTypo3DbBackend.php',
@@ -18,6 +19,7 @@ return array(
 	'tx_cabagextbase_utility_file' => $extensionPath . 'Classes/Utility/File.php',
 	'tx_cabagextbase_utility_logging' => $extensionPath . 'Classes/Utility/Logging.php',
 	'tx_cabagextbase_utility_mail' => $extensionPath . 'Classes/Utility/Mail.php',
+	'tx_cabagextbase_utility_fixformtoken' => $extensionPath . 'Classes/Utility/FixFormToken.php',
 	'tx_cabagextbase_validator_boundnotemptyvalidator' => $extensionPath . 'Classes/Validator/BoundNotEmptyValidator.php',
 	'tx_cabagextbase_validator_twicevalidator' => $extensionPath . 'Classes/Validator/TwiceValidator.php',
 	'tx_cabagextbase_viewhelpers_cdataviewhelper' => $extensionPath . 'Classes/ViewHelpers/CdataViewHelper.php',
@@ -40,5 +42,13 @@ return array(
 	'tx_cabagextbase_viewhelpers_widget_controller_flashuploadcontroller' => $extensionPath . 'Classes/ViewHelpers/Widget/Controller/FlashuploadController.php',
 	'tx_cabagextbase_eid_flashupload' => $extensionPath . 'Classes/eID/Flashupload.php',
 	'tx_cabagextbase_viewhelpers_imagelazyviewhelper' => $extensionPath . 'Classes/ViewHelpers/ImageLazyViewHelper.php',
+	'tx_cabagextbase_viewhelpers_link_lightboxviewhelper' => $extensionPath . 'Classes/ViewHelpers/Link/LightboxViewHelper.php',
+	'tx_cabagextbase_viewhelpers_iforviewhelper' => $extensionPath . 'Classes/ViewHelpers/IfOrViewHelper.php',
+	'tx_cabagextbase_viewhelpers_typolinkhelper' => $extensionPath . 'Classes/ViewHelpers/TypoLinkHelper.php',
 );
-?>
+
+if (version_compare(TYPO3_version, '6.2', '>=')) {
+	$classes['tx_cabagextbase_eid_fixformtoken'] = $extensionPath . 'Classes/eID/FixFormToken.php';
+}
+
+return $classes;
