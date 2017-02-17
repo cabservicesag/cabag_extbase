@@ -29,7 +29,7 @@
  * {namespace cab=Tx_CabagExtbase_ViewHelpers}<cab:datepicker property="someProperty" />
  *
  */
-class Tx_CabagExtbase_ViewHelpers_DatepickerViewHelper extends Tx_Fluid_ViewHelpers_Form_TextfieldViewHelper {
+class Tx_CabagExtbase_ViewHelpers_DatepickerViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Form\TextfieldViewHelper {
 	/**
 	 * The calling extensions name.
 	 * @var string

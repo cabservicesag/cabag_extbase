@@ -30,7 +30,7 @@
  *<cab:Date2Cal id="wishedEndDateTime" prefix="tx_jamesservices" name="tx_jamesservices_pi1[newOrder][singleorders][{service.uid}][wishedEndDateTime]" />
  *
  */
-class Tx_CabagExtbase_ViewHelpers_Date2CalViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+class Tx_CabagExtbase_ViewHelpers_Date2CalViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
 	/**
 	 * Escapes special characters with their escaped counterparts as needed.
@@ -45,7 +45,7 @@ class Tx_CabagExtbase_ViewHelpers_Date2CalViewHelper extends Tx_Fluid_Core_ViewH
 	 */
 	public function render($id, $name, $prefix, $dateFormat = '%d.%m.%y %H:%M') {
 		$id = $id.rand();
-		include_once(t3lib_extMgm::siteRelPath('date2cal') . '/src/class.jscalendar.php');
+		include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('date2cal') . '/src/class.jscalendar.php');
 		
 		$JSCalendar = JSCalendar::getInstance();
 		

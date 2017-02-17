@@ -28,7 +28,7 @@
 /**
  * Validate that two consecutive values entered are the same.
  */
-class Tx_CabagExtbase_Validator_TwiceValidator extends Tx_Extbase_Validation_Validator_AbstractValidator {
+class Tx_CabagExtbase_Validator_TwiceValidator extends \TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator {
 	/**
 	 * @var array Stores the values.
 	 */

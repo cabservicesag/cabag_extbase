@@ -123,7 +123,7 @@ class Tx_CabagExtbase_Utility_File {
 			$c++;
 		}
 		
-		$ok = t3lib_div::upload_copy_move($record['tmp_name'], $this->uploadsDir . $file);
+		$ok = \TYPO3\CMS\Core\Utility\GeneralUtility::upload_copy_move($record['tmp_name'], $this->uploadsDir . $file);
 		
 		if (!$ok) return false;
 		
@@ -203,7 +203,7 @@ class Tx_CabagExtbase_Utility_File {
 	 * @param string $csv The commaseparated file extensions.
 	 */
 	public function csvExtensionToPreg($csv) {
-		$extensions = t3lib_div::trimExplode(',', $csv, true);
+		$extensions = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $csv, true);
 		if (count($extensions) === 0) {
 			return '';
 		}

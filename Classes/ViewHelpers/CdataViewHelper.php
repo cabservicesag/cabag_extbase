@@ -30,7 +30,7 @@
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  * @scope prototype
  */
-class Tx_CabagExtbase_ViewHelpers_CdataViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+class Tx_CabagExtbase_ViewHelpers_CdataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
 	/**
 	 * Render the CDATA content.

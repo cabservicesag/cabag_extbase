@@ -28,7 +28,7 @@
 /**
  * Validate that at least a certain amount of fields is not empty.
  */
-class Tx_CabagExtbase_Validator_BoundNotEmptyValidator extends Tx_Extbase_Validation_Validator_AbstractValidator {
+class Tx_CabagExtbase_Validator_BoundNotEmptyValidator extends \TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator {
 	/**
 	 * @var array Stores the values.
 	 */

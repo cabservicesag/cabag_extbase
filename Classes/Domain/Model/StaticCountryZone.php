@@ -31,7 +31,7 @@
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class Tx_CabagExtbase_Domain_Model_StaticCountryZone extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_CabagExtbase_Domain_Model_StaticCountryZone extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * The relative path to the flag directory.
@@ -282,7 +282,7 @@ class Tx_CabagExtbase_Domain_Model_StaticCountryZone extends Tx_Extbase_DomainOb
 	 * @return string
 	 */
 	public function getCurrentLocalName() {
-		switch(t3lib_div::_GP('L')) {
+		switch(\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('L')) {
 		case '0':
 			return $this->znNameLocal;
 		break;

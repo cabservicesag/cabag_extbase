@@ -31,7 +31,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_CabagExtbase_Controller_BaseController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_CabagExtbase_Controller_BaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 	/**
 	 * The last thrown and caught exception.
 	 *
@@ -47,7 +47,7 @@ class Tx_CabagExtbase_Controller_BaseController extends Tx_Extbase_MVC_Controlle
 	 * @return string The locallized string.
 	 */
 	public function translate($key, $arguments = null) {
-		return Tx_Extbase_Utility_Localization::translate($key, $this->extensionName, $arguments);
+		return \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate($key, $this->extensionName, $arguments);
 	}
 
 	/**
@@ -81,16 +81,16 @@ class Tx_CabagExtbase_Controller_BaseController extends Tx_Extbase_MVC_Controlle
 	protected function callActionMethod() {
 		try {
 			parent::callActionMethod();
-		} catch (Tx_Extbase_MVC_Exception_StopAction $ignoredException) {
+		} catch (\TYPO3\CMS\Extbase\Mvc\Exception\StopActionException $ignoredException) {
 			throw $ignoredException;
 		} catch (Exception $exception) {
 			$this->lastException = $exception;
 			
 			if (!empty($this->settings['addExceptionToFlashMessage'])) {
-				$this->flashMessageContainer->add($exception->getMessage(), '', t3lib_FlashMessage::ERROR);
+				$this->flashMessageContainer->add($exception->getMessage(), '', \TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);
 			}
 			if (!empty($this->settings['addStackTraceToFlashMessage'])) {
-				$this->flashMessageContainer->add($exception->getTraceAsString(), '', t3lib_FlashMessage::ERROR);
+				$this->flashMessageContainer->add($exception->getTraceAsString(), '', \TYPO3\CMS\Core\Messaging\FlashMessage::ERROR);
 			}
 			if (!empty($this->settings['exceptionAction'])) {
 				$errorAction = preg_replace('/action$/i', '', $this->settings['exceptionAction']) . 'Action';

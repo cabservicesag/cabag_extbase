@@ -29,7 +29,7 @@
  * @package CabagExtbase
  * @subpackage Persistence
  */
-class Tx_CabagExtbase_Persistence_QueryFactory extends Tx_Extbase_Persistence_QueryFactory {
+class Tx_CabagExtbase_Persistence_QueryFactory extends \TYPO3\CMS\Extbase\Persistence\Generic\QueryFactory {
 
 	/**
 	 * Creates a query object working on the given class name

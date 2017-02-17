@@ -31,7 +31,7 @@
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class Tx_CabagExtbase_Domain_Model_StaticLanguage extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_CabagExtbase_Domain_Model_StaticLanguage extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	
 	/**

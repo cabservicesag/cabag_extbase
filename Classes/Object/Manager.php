@@ -28,7 +28,7 @@
  * @version $Id:$
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
-class Tx_CabagExtbase_Object_Manager extends Tx_Extbase_Object_ObjectManager {
+class Tx_CabagExtbase_Object_Manager extends \TYPO3\CMS\Extbase\Object\ObjectManager {
 
 	/**
 	 * Returns a fresh or existing instance of the object specified by $objectName.
@@ -44,9 +44,10 @@ class Tx_CabagExtbase_Object_Manager extends Tx_Extbase_Object_ObjectManager {
 	 * @deprecated since Extbase 1.3.0; will be removed in Extbase 1.5.0. Please use Tx_Extbase_Object_ObjectManager instead
 	 */
 	public function getObject($objectName) {
-		t3lib_div::logDeprecatedFunction();
+		\TYPO3\CMS\Core\Utility\GeneralUtility::logDeprecatedFunction();
 		$arguments = array_slice(func_get_args(), 1);
-		if (in_array('t3lib_Singleton', class_implements($objectName))) {
+		//if (in_array('t3lib_Singleton', class_implements($objectName))) {
+		if (in_array('TYPO3\\CMS\\Core\\SingletonInterface', class_implements($objectName))) {
 			$object = $this->get($objectName, $arguments);
 		} else {
 			$object = $this->create($objectName, $arguments);

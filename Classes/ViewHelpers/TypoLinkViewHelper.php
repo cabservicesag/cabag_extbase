@@ -90,6 +90,11 @@ class Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper extends \TYPO3\CMS\Fluid\Co
 	    $linkToStartpage = 1;
 	}
 
+	$linkToExternalPage = 0;
+	if ((preg_match('/^http/', $parts['url'])) || (preg_match('/^www./', $parts['url']))) {
+	    $linkToExternalPage = 1;
+	}
+
 	// check beginning of additionalParams and correct it
 	if ($parts['additionalParams']) {
 	    if ($parts['additionalParams'][0] == '&') {
@@ -119,20 +124,20 @@ class Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper extends \TYPO3\CMS\Fluid\Co
 	} else {
 	    $parts['class'] = '';
 	}
-	
+
 	if ($style) {
 		$parts['style'] = 'style="'.$style.'"';
 	} else {
 		$parts['style'] = '';
 	}
-	
+
 	if ($parts['additionalAttributes']) {
 		$parts['additionalAttributes'] = $this->getAdditionalttributes($parts['additionalAttributes']);
 	} else {
 		$parts['additionalAttributes'] = '';
 	}
-	
-	
+
+
 
 
 	// build title-attribute from parameter and link-field
@@ -187,41 +192,41 @@ class Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper extends \TYPO3\CMS\Fluid\Co
 
 	    // Check if current part is not set
 	    if ($curPart === self::TOKEN_NOT_SET) {
-		// Move to next part
-		$realPart++;
-		continue;
+			// Move to next part
+			$realPart++;
+			continue;
 	    }
 
 	    // Start of string
 	    if ($curPart[0] === self::TOKEN_STRING) {
-		$curString = substr($curPart, 1) . self::TOKEN_STRING_DELIMETER;
-		$inString = TRUE;
+			$curString = substr($curPart, 1) . self::TOKEN_STRING_DELIMETER;
+			$inString = TRUE;
 	    }
 	    // Still in string
 	    elseif ($inString && $curPart[strlen($curPart) - 1] !== self::TOKEN_STRING) {
-		$curString .= $curPart . self::TOKEN_STRING_DELIMETER;
+	    	$curString .= $curPart . self::TOKEN_STRING_DELIMETER;
 	    }
 	    // End of string
 	    elseif ($inString && $curPart[strlen($curPart) - 1] === self::TOKEN_STRING) {
-		$curString .= substr($curPart, 0, strlen($curPart) - 1);
+			$curString .= substr($curPart, 0, strlen($curPart) - 1);
 
-		// Apply generated part
-		$parts[$curPartKey] = $curString;
+			// Apply generated part
+			$parts[$curPartKey] = $curString;
 
-		// Reset temp string
-		$curString = '';
-		$inString = FALSE;
+			// Reset temp string
+			$curString = '';
+			$inString = FALSE;
 
-		// Move to next part
-		$realPart++;
+			// Move to next part
+			$realPart++;
 	    }
 	    // Not in string, simple part
 	    else {
-		$parts[$curPartKey] = $curPart;
-		$realPart++;
+			$parts[$curPartKey] = $curPart;
+			$realPart++;
 	    }
 	}
-	
+
     }
 
     /**
@@ -232,81 +237,83 @@ class Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper extends \TYPO3\CMS\Fluid\Co
      * @param boolean $setLinkAccessRestrictedPages Set to TRUE to create Links on access restricted pages
      */
     protected function postCheck(&$parts, $useHttps, $setLinkAccessRestrictedPages) {
-	// Check URL
-	$urlParts = !empty($parts) ? parse_url($parts['url']) : FALSE;
+		// Check URL
+		$urlParts = !empty($parts) ? parse_url($parts['url']) : FALSE;
 
-	// Abort if url is not present
-	if ($urlParts === FALSE) {
-	    return;
-	}
-	if ($parts['additionalParams']) {
-	    $urlParts['additionalParams'] = $parts['additionalParams'];
-	}
-
-	// Check if type if link
-	if ($urlParts['host'] && !$urlParts['port']) {
-	    // External Link
-	    // Check if HTTPS should be applied
-	    if (!$urlParts['scheme']) {
-		if ($useHttps) {
-		    $urlParts['scheme'] = 'https';
-		} else {
-		    $urlParts['scheme'] = 'http';
+		// Abort if url is not present
+		if ($urlParts === FALSE) {
+			return;
 		}
-	    }
-
-	    /*	     * ************** */
-	    /** Rebuild URL * */
-	    /*	     * ************** */
-
-	    // Add scheme
-	    $url = $urlParts['scheme'] . '://';
-
-	    // Add user and password if present
-	    if (!empty($urlParts['user'])) {
-		if (!empty($urlParts['pass'])) {
-		    $url .= $urlParts['user'] . ':' . $urlParts['pass'] . '@';
-		} else {
-		    $url .= $urlParts['user'] . '@';
+		if ($parts['additionalParams']) {
+			$urlParts['additionalParams'] = $parts['additionalParams'];
 		}
-	    }
+		// Check if type if link
+		if ($urlParts['host'] && !$urlParts['port']) {
+			// External Link
+			// Check if HTTPS should be applied
+			if (!$urlParts['scheme']) {
+				if ($useHttps) {
+					$urlParts['scheme'] = 'https';
+				} else {
+					$urlParts['scheme'] = 'http';
+				}
+			}
 
-	    // Add host with path
-	    $url .= $urlParts['host'] . $urlParts['path'] . '/';
+			/*	     * ************** */
+			/** Rebuild URL * */
+			/*	     * ************** */
 
-	    // Add query if present
-	    if (!empty($urlParts['query'])) {
-		$url .= '?' . $urlParts['query'];
-	    }
+			// Add scheme
+			$url = $urlParts['scheme'] . '://';
 
-	    // Add fragment if present
-	    if (!empty($urlParts['fragment'])) {
-		$url .= $urlParts['fragment'];
-	    }
+			// Add user and password if present
+			if (!empty($urlParts['user'])) {
+				if (!empty($urlParts['pass'])) {
+					$url .= $urlParts['user'] . ':' . $urlParts['pass'] . '@';
+				} else {
+					$url .= $urlParts['user'] . '@';
+				}
+			}
 
-	    // Reassign url
-	    $parts['url'] = $url;
-	} elseif ($urlParts['host'] && $urlParts['port']) {
-	    // File Link
-	    $file = $this->fileRepository->findByUid(intval($urlParts['port']))->toArray();
+			// Add host with path
+			$url .= $urlParts['host'] . $urlParts['path'];
 
-	    $parts['url'] = $file['url'];
-	} elseif ($urlParts['scheme'] == 'tel') {
-		// tel link
-		$parts['url'] = $urlParts['scheme'] . ':' . $urlParts['path'];
-	}else {
-	    // Internal or Mail Link
-	    $uriBuilder = $this->controllerContext->getUriBuilder();
-	    $url = $uriBuilder->reset()
-				->setLinkAccessRestrictedPages($setLinkAccessRestrictedPages)	
-				->setTargetPageUid($urlParts['path'])
-				->build();
+			// Add query if present
+			if (!empty($urlParts['query'])) {
+				$url .= '?' . $urlParts['query'];
+			}
 
-	    $parts['url'] = $url;
-	}
-	if ($urlParts['additionalParams']) {
-	    $parts['url'] .= $urlParts['additionalParams'];
-	}
+			// Add fragment if present
+			if (!empty($urlParts['fragment'])) {
+				$url .=  '#' . $urlParts['fragment'];
+			}
+
+			// Reassign url
+			$parts['url'] = $url;
+		} elseif ($urlParts['host'] && $urlParts['port']) {
+			// File Link
+      try {
+    				$file = $this->fileRepository->findByUid(intval($urlParts['port']))->toArray();
+    				$parts['url'] = $file['url'];
+    			} catch (\TYPO3\CMS\Core\Resource\Exception\FileDoesNotExistException $e) {
+    				//unset($parts);
+    			}
+		} elseif ($urlParts['scheme'] == 'tel') {
+			// tel link
+			$parts['url'] = $urlParts['scheme'] . ':' . $urlParts['path'];
+		} else {
+			// Internal or Mail Link
+			$uriBuilder = $this->controllerContext->getUriBuilder();
+			$url = $uriBuilder->reset()
+					->setLinkAccessRestrictedPages($setLinkAccessRestrictedPages)
+					->setTargetPageUid($urlParts['path'])
+					->build();
+
+			$parts['url'] = $url;
+		}
+		if ($urlParts['additionalParams']) {
+			$parts['url'] .= $urlParts['additionalParams'];
+		}
     }
 
 
@@ -332,13 +339,13 @@ class Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper extends \TYPO3\CMS\Fluid\Co
 		else {
 		    $linktext = $this->renderChildren();
 		}
-	    
+
 		// define link template
 		$urlTemplate = '<a href="%s" %s %s %s %s %s>%s</a>';
 		// Parse template
 		$parsedTemplate = sprintf($urlTemplate, $parts['url'], $parts['target'], $parts['title'], $parts['class'], $parts['style'], $parts['additionalAttributes'], $linktext);
 		$replacementTagOutput = '<'.$replacementTag.' '.$parts['class'].'>' . $linktext . '</'.$replacementTag.'>';
-		
+
 		if ($parts['url'] OR $linkToStartpage) {
 			return $parsedTemplate;
 		} elseif ($replacementTag) {
@@ -347,10 +354,10 @@ class Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper extends \TYPO3\CMS\Fluid\Co
 			return $linktext;
 		}
 	}
-	
+
 	/**
 	 * build tag attributes from link string
-	 * 
+	 *
 	 * @param string $attributesString
 	 * @return string
 	 */
@@ -358,7 +365,7 @@ class Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper extends \TYPO3\CMS\Fluid\Co
 		$attributesString = preg_replace('/^(&)(.*)/', '$2', $attributesString);
 		$attributes = explode('&', $attributesString);
 		$tagAttributes = '';
-		
+
 		forEach($attributes as $attribute) {
 			$parts = explode('=', $attribute, 2);
 			if(count($parts) == 1) {
@@ -367,7 +374,7 @@ class Tx_CabagExtbase_ViewHelpers_TypoLinkViewHelper extends \TYPO3\CMS\Fluid\Co
 				$tagAttributes .= htmlspecialchars($parts[0]) . '="' . htmlspecialchars($parts[1]) . '" ';
 			}
 		}
-		
+
 		return $tagAttributes;
 	}
 

@@ -35,7 +35,7 @@
  *
  * @see Tx_Fluid_ViewHelpers_FormViewHelper
  */
-class Tx_CabagExtbase_ViewHelpers_FormViewHelper extends Tx_Fluid_ViewHelpers_FormViewHelper {
+class Tx_CabagExtbase_ViewHelpers_FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper {
 	
 	/**
 	 * We need the arguments of the formActionUri on requesthash calculation

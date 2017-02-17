@@ -30,18 +30,18 @@
  * @subpackage Persistence\Storage
  * @version $Id: Typo3DbBackend.php 2297
  */
-class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends Tx_Extbase_Persistence_Storage_Typo3DbBackend {
+class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends \TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbBackend {
 
 	/**
 	 * Returns the number of tuples matching the query.
 	 *
-	 * @param Tx_Extbase_Persistence_QOM_QueryObjectModelInterface $query
+	 * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
 	 * @return integer The number of matching tuples
 	 */
-	public function getObjectCountByQuery(Tx_Extbase_Persistence_QueryInterface $query) {
+	public function getObjectCountByQuery(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query) {
 		$constraint = $query->getConstraint();
-		if($constraint instanceof Tx_Extbase_Persistence_QOM_StatementInterface) {
-			throw new Tx_Extbase_Persistence_Storage_Exception_BadConstraint('Could not execute count on queries with a constraint of type Tx_Extbase_Persistence_QOM_StatementInterface', 1256661045);
+		if($constraint instanceof \TYPO3\CMS\Extbase\Persistence\Generic\Qom\ConstraintInterface) {
+			throw new \TYPO3\CMS\Extbase\Persistence\Generic\Storage\Exception\BadConstraintException('Could not execute count on queries with a constraint of type TYPO3\CMS\Extbase\Persistence\Generic\Qom\ConstraintInterface', 1256661045);
 		}
 		$parameters = array();
 		$statementParts = $this->parseQuery($query, $parameters);
@@ -76,32 +76,32 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends Tx_Extbase
 	/**
 	 * Transforms orderings into SQL.
 	 *
-	 * @param array $orderings An array of orderings (Tx_Extbase_Persistence_QOM_Ordering)
-	 * @param Tx_Extbase_Persistence_QOM_SourceInterface $source The source
+	 * @param array $orderings An array of orderings (\TYPO3\CMS\Extbase\Persistence\Generic\Qom\Ordering)
+	 * @param \TYPO3\CMS\Extbase\Persistence\Generic\Qom\SourceInterface $source The source
 	 * @param array &$sql The query parts
 	 * @return void
 	 */
-	protected function parseOrderings(array $orderings, Tx_Extbase_Persistence_QOM_SourceInterface $source, array &$sql) {
+	protected function parseOrderings(array $orderings, \TYPO3\CMS\Extbase\Persistence\Generic\Qom\SourceInterface $source, array &$sql) {
 		foreach ($orderings as $propertyName => $order) {
 			switch ($order) {
 				case Tx_Extbase_Persistence_QOM_QueryObjectModelConstantsInterface::JCR_ORDER_ASCENDING: // Deprecated since Extbase 1.1
-				case Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING:
+				case \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING:
 					$order = 'ASC';
 					break;
 				case Tx_Extbase_Persistence_QOM_QueryObjectModelConstantsInterface::JCR_ORDER_DESCENDING: // Deprecated since Extbase 1.1
-				case Tx_Extbase_Persistence_QueryInterface::ORDER_DESCENDING:
+				case \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING:
 					$order = 'DESC';
 					break;
 				default:
-					throw new Tx_Extbase_Persistence_Exception_UnsupportedOrder('Unsupported order encountered.', 1242816074);
+					throw new \TYPO3\CMS\Extbase\Persistence\Generic\Exception\UnsupportedOrderException('Unsupported order encountered.', 1242816074);
 			}
-			if ($source instanceof Tx_Extbase_Persistence_QOM_SelectorInterface) {
+			if ($source instanceof \TYPO3\CMS\Extbase\Persistence\Generic\Qom\SelectorInterface) {
 				$className = $source->getNodeTypeName();
 				$tableName = $this->dataMapper->convertClassNameToTableName($className);
 				while (strpos($propertyName, '.') !== FALSE) {
 					$this->addUnionStatement($className, $tableName, $propertyName, $sql);
 				}
-			} elseif ($source instanceof Tx_Extbase_Persistence_QOM_JoinInterface) {
+			} elseif ($source instanceof \TYPO3\CMS\Extbase\Persistence\Generic\Qom\JoinInterface) {
 				$tableName = $source->getLeft()->getSelectorName();
 			}
 			
@@ -138,14 +138,14 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends Tx_Extbase
 	 * Provides a security patch for typo3 db backend storage
 	 * @see https://review.typo3.org/#/c/18721/
 	 *
-	 * @param Tx_Extbase_Persistence_QOM_ComparisonInterface $comparison The comparison to parse
-	 * @param Tx_Extbase_Persistence_QOM_SourceInterface $source The source
+	 * @param \TYPO3\CMS\Extbase\Persistence\Generic\Qom\ComparisonInterface $comparison The comparison to parse
+	 * @param \TYPO3\CMS\Extbase\Persistence\Generic\Qom\SourceInterface $source The source
 	 * @param array &$sql SQL query parts to add to
 	 * @param array &$parameters Parameters to bind to the SQL
 	 * @param array $boundVariableValues The bound variables in the query and their values
 	 * @return void
 	 */
-	protected function parseComparison(Tx_Extbase_Persistence_QOM_ComparisonInterface $comparison, Tx_Extbase_Persistence_QOM_SourceInterface $source, array &$sql, array &$parameters) {
+	protected function parseComparison(\TYPO3\CMS\Extbase\Persistence\Generic\Qom\ComparisonInterface $comparison, \TYPO3\CMS\Extbase\Persistence\Generic\Qom\SourceInterface $source, array &$sql, array &$parameters) {
 		$operand1 = $comparison->getOperand1();
 		$operator = $comparison->getOperator();
 		$operand2 = $comparison->getOperand2();
@@ -154,11 +154,11 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends Tx_Extbase
 			 * This if enables equals() to behave like in(). Use in() instead.
 			 * @deprecated since Extbase 1.3; will be removed in Extbase 1.5
 			 */
-		if (($operator === Tx_Extbase_Persistence_QueryInterface::OPERATOR_EQUAL_TO) && (is_array($operand2) || ($operand2 instanceof ArrayAccess) || ($operand2 instanceof Traversable))) {
-			$operator = Tx_Extbase_Persistence_QueryInterface::OPERATOR_IN;
+		if (($operator === \TYPO3\CMS\Extbase\Persistence\QueryInterface::OPERATOR_EQUAL_TO) && (is_array($operand2) || ($operand2 instanceof ArrayAccess) || ($operand2 instanceof Traversable))) {
+			$operator = \TYPO3\CMS\Extbase\Persistence\QueryInterface::OPERATOR_IN;
 		}
 
-		if ($operator === Tx_Extbase_Persistence_QueryInterface::OPERATOR_IN) {
+		if ($operator === \TYPO3\CMS\Extbase\Persistence\QueryInterface::OPERATOR_IN) {
 			$items = array();
 			$hasValue = FALSE;
 			foreach ($operand2 as $value) {
@@ -174,7 +174,7 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends Tx_Extbase
 				$this->parseDynamicOperand($operand1, $operator, $source, $sql, $parameters, NULL, $operand2);
 				$parameters[] = $items;
 			}
-		} elseif ($operator === Tx_Extbase_Persistence_QueryInterface::OPERATOR_CONTAINS) {
+		} elseif ($operator === \TYPO3\CMS\Extbase\Persistence\QueryInterface::OPERATOR_CONTAINS) {
 			if ($operand2 === NULL) {
 				$sql['where'][] = '1<>1';
 			} else {
@@ -188,11 +188,11 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends Tx_Extbase
 				$dataMap = $this->dataMapper->getDataMap($className);
 				$columnMap = $dataMap->getColumnMap($propertyName);
 				$typeOfRelation = $columnMap->getTypeOfRelation();
-				if ($typeOfRelation === Tx_Extbase_Persistence_Mapper_ColumnMap::RELATION_HAS_AND_BELONGS_TO_MANY) {
+				if ($typeOfRelation === \TYPO3\CMS\Extbase\Persistence\Generic\Mapper\ColumnMap::RELATION_HAS_AND_BELONGS_TO_MANY) {
 					$relationTableName = $columnMap->getRelationTableName();
 					$sql['where'][] = $tableName . '.uid IN (SELECT ' . $columnMap->getParentKeyFieldName() . ' FROM ' . $relationTableName . ' WHERE ' . $columnMap->getChildKeyFieldName() . '=?)';
 					$parameters[] = intval($this->getPlainValue($operand2));
-				} elseif ($typeOfRelation === Tx_Extbase_Persistence_Mapper_ColumnMap::RELATION_HAS_MANY) {
+				} elseif ($typeOfRelation === \TYPO3\CMS\Extbase\Persistence\Generic\Mapper\ColumnMap::RELATION_HAS_MANY) {
 					$parentKeyFieldName = $columnMap->getParentKeyFieldName();
 					if (isset($parentKeyFieldName)) {
 						$childTableName = $columnMap->getChildTableName();
@@ -203,14 +203,14 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends Tx_Extbase
 						$parameters[] = intval($this->getPlainValue($operand2));
 					}
 				} else {
-					throw new Tx_Extbase_Persistence_Exception_RepositoryException('Unsupported relation for contains().', 1267832524);
+					throw new \TYPO3\CMS\Extbase\Persistence\Generic\Exception\RepositoryException('Unsupported relation for contains().', 1267832524);
 				}
 			}
 		} else {
 			if ($operand2 === NULL) {
-				if ($operator === Tx_Extbase_Persistence_QueryInterface::OPERATOR_EQUAL_TO) {
+				if ($operator === \TYPO3\CMS\Extbase\Persistence\QueryInterface::OPERATOR_EQUAL_TO) {
 					$operator = self::OPERATOR_EQUAL_TO_NULL;
-				} elseif ($operator === Tx_Extbase_Persistence_QueryInterface::OPERATOR_NOT_EQUAL_TO) {
+				} elseif ($operator === \TYPO3\CMS\Extbase\Persistence\QueryInterface::OPERATOR_NOT_EQUAL_TO) {
 					$operator = self::OPERATOR_NOT_EQUAL_TO_NULL;
 				}
 			}

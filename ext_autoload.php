@@ -45,6 +45,7 @@ $classes = array(
 	'tx_cabagextbase_viewhelpers_link_lightboxviewhelper' => $extensionPath . 'Classes/ViewHelpers/Link/LightboxViewHelper.php',
 	'tx_cabagextbase_viewhelpers_iforviewhelper' => $extensionPath . 'Classes/ViewHelpers/IfOrViewHelper.php',
 	'tx_cabagextbase_viewhelpers_typolinkhelper' => $extensionPath . 'Classes/ViewHelpers/TypoLinkHelper.php',
+	'\\Cabag\\CabagExtbase\\AlternativeImplementation\\Persistence\\Storage\\Typo3DbQueryParser' => $extensionPath . 'Classes/AlternativeImplementation/Persistence/Storage/Typo3DbQueryParser.php',
 );
 
 if (version_compare(TYPO3_version, '6.2', '>=')) {

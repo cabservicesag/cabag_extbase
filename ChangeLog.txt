@@ -1,3 +1,22 @@
+2017-02-17 Tizian Schmidlin, Xiaoling Peng <st@cabag.ch>,<xp@cabag.ch>
+	* version 1.0.0
+	* fixed php without compatibility6 in TYPO3 7.6
+
+2016-01-20 Tizian Schmidlin <st@cabag.ch>
+	* version 0.9.8
+	* added some features to query parser through alternative implementation
+	* edited Classes/ViewHelpers/TypoLinkViewHelper.php
+	* added try and catch to postCheck(), //File Link
+
+2016-01-13 Daniel Kersting <kd@cabag.ch>
+	* version 0.9.7
+	* edited Classes/ViewHelpers/TypoLinkViewHelper.php
+	* fixed issue #24853
+
+2015-08-11 Michael Bossart <mb@cabag.ch>
+	* version 0.9.6
+	* edited Classes/ViewHelpers/TypoLinkViewHelper.php
+
 2015-07-29 Philip Liebel <ph@cabag.ch>
 	* version 0.9.5
 	* edited Classes/ViewHelpers/TypoLinkViewHelper.php: modified to display additionalAttributes from link string, working on issue #19750
@@ -310,11 +329,11 @@
 	2011-08-31 Sonja Scholz <sonja.scholz@typo3.org>
 		* Version 0.1.9
 		* Mail - changed sendMail function, support comma separated list of recipients in swiftmailer
-	
+
 	2011-08-29 Sonja Scholz <sonja.scholz@typo3.org>
 		* Version 0.1.8
 		* ViewHelpers - added new ViewHelper Date2Cal
-	
+
 	2011-08-26 Sonja Scholz <sonja.scholz@typo3.org>
 		* Version 0.1.7
 		* Mail - added function addAttachment() to add attachments to the email
@@ -356,7 +375,7 @@
 	* version 0.1.7
 	* created repository for static country zones
 	* created model for static country zones
-	
+
 2011-08-09 Dimitri König <dk@cabag.ch>
 	* version 0.1.6
 	* fixed bug IfContains viewhelper

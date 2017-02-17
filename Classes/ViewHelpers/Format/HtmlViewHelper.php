@@ -48,7 +48,7 @@
  * @see http://typo3.org/documentation/document-library/references/doc_core_tsref/4.2.0/view/1/5/#id4198758
  *
  */
-class Tx_CabagExtbase_ViewHelpers_Format_HtmlViewHelper extends Tx_Fluid_ViewHelpers_Format_HtmlViewHelper {
+class Tx_CabagExtbase_ViewHelpers_Format_HtmlViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Format\HtmlViewHelper {
 
 	/**
 	 * @param string $parseFuncTSPath path to TypoScript parseFunc setup.

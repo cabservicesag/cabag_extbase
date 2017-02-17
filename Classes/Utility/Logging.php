@@ -350,7 +350,7 @@ class Tx_CabagExtbase_Utility_Logging {
 	 * @return boolean OK/NOK.
 	 */
 	protected function checkOptionsFlash($options) {
-		return $options['flashMessageContainer'] instanceof Tx_Extbase_MVC_Controller_FlashMessages;
+		return $options['flashMessageContainer'] instanceof \TYPO3\CMS\Extbase\Mvc\Controller\FlashMessageContainer;
 	}
 	
 	/**
@@ -394,12 +394,12 @@ class Tx_CabagExtbase_Utility_Logging {
 	 * @return boolean Whether it worked.
 	 */
 	protected function writeMail($options, $entries) {
-		$templateFile = t3lib_div::getFileAbsFileName($options['template']);
+		$templateFile = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($options['template']);
 		if (!is_file($templateFile)) {
-			$templateFile = t3lib_div::getFileAbsFileName('EXT:cabag_extbase/Resources/Private/Mail/Logging/Template.' . (empty($options['plain']) ? 'html' : 'txt'));
+			$templateFile = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('EXT:cabag_extbase/Resources/Private/Mail/Logging/Template.' . (empty($options['plain']) ? 'html' : 'txt'));
 		}
 		
-		$mail = t3lib_div::makeInstance(
+		$mail = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
 			'Tx_CabagExtbase_Utility_Mail',
 			null,
 			$templateFile
@@ -433,7 +433,7 @@ class Tx_CabagExtbase_Utility_Logging {
 		foreach ($entries as $entry) {
 			$severity = min(floor(max(intval($entry['severity']), 0) / 100), 4);
 			$severity = $severity == 2 ? -1 : ($severity > 2 ? $severity - 1 : $severity);
-			t3lib_div::devLog($entry['message'], $entry['tag'], $severity, $entry['data']);
+			\TYPO3\CMS\Core\Utility\GeneralUtility::devLog($entry['message'], $entry['tag'], $severity, $entry['data']);
 		}
 		return true;
 	}

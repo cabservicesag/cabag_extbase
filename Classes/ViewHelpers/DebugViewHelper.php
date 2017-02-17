@@ -25,7 +25,7 @@
  * foobarbazfoo
  * </output>
  */
-class Tx_CabagExtbase_ViewHelpers_DebugViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+class Tx_CabagExtbase_ViewHelpers_DebugViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
 	/**
 	 * Simulate t3lib_utility_Debug::debug() so that it can be used in the BE aswell to "pretty print" stuff.

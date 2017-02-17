@@ -40,7 +40,7 @@ class Tx_CabagExtbase_Domain_Repository_StaticCountryRepository extends Tx_Cabag
 	 */
 	public function __construct() {
 		parent::__construct();
-		$querySettings = t3lib_div::makeInstance('Tx_Extbase_Persistence_Typo3QuerySettings');
+		$querySettings = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
 		$querySettings->setRespectStoragePage(false);
 		$this->setQuerySettings($querySettings);
 	}

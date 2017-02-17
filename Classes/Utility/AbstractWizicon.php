@@ -74,8 +74,8 @@ abstract class tx_CabagExtbase_Utility_AbstractWizicon {
 		
 		$extensionKey = $this->getExtensionKey();
 		if (!isset(self::$localLang[$extensionKey])) {
-			$file = t3lib_extMgm::extPath($extensionKey) . 'Resources/Private/Language/locallang_db.xml';
-			self::$localLang[$extensionKey] = t3lib_div::readLLfile($file, $GLOBALS['LANG']->lang);
+			$file = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($extensionKey) . 'Resources/Private/Language/locallang_db.xml';
+			self::$localLang[$extensionKey] = \TYPO3\CMS\Core\Utility\GeneralUtility::readLLfile($file, $GLOBALS['LANG']->lang);
 		}
 		
 		return $GLOBALS['LANG']->getLLL($key, self::$localLang[$extensionKey]);
@@ -108,6 +108,6 @@ abstract class tx_CabagExtbase_Utility_AbstractWizicon {
 	 * @return string The icon path for the given plugin signature.
 	 */
 	function getIcon($pluginSignature) {
-		return t3lib_extMgm::extRelPath($this->getExtensionKey()) . 'Resources/Public/Icons/Wizicon_' . $pluginSignature . '.gif';
+		return \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($this->getExtensionKey()) . 'Resources/Public/Icons/Wizicon_' . $pluginSignature . '.gif';
 	}
 }

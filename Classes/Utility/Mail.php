@@ -86,10 +86,10 @@ class Tx_CabagExtbase_Utility_Mail {
 	 * @param string $optionalPlaintextPath The path to the addition plaintext template file (optional).
 	 * @return void
 	 */
-	public function reset(Tx_Extbase_MVC_Controller_ControllerContext $controllerContext = null, $filePath, $settings = array(), $optionalPlaintextPath = '') {
+	public function reset(\TYPO3\CMS\Extbase\Mvc\Controller\ControllerContext $controllerContext = null, $filePath, $settings = array(), $optionalPlaintextPath = '') {
 		if ($this->objectManager === null) {
 			// t3lib_singleton
-			$this->objectManager = t3lib_div::makeInstance('Tx_Extbase_Object_Manager');
+			$this->objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_Extbase_Object_Manager');
 		}
 		
 	 	$view = $this->objectManager->getObject('Tx_Fluid_View_StandaloneView');
@@ -98,7 +98,7 @@ class Tx_CabagExtbase_Utility_Mail {
 		}
 		
 		// Template Path Override
-		$view->setTemplatePathAndFilename(t3lib_div::getFileAbsFileName($filePath));
+		$view->setTemplatePathAndFilename(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($filePath));
 		
 		if (method_exists($view, 'injectSettings')) {
 			$view->injectSettings($settings);
@@ -114,7 +114,7 @@ class Tx_CabagExtbase_Utility_Mail {
 			}
 
 			// Template Path Override
-			$plainTextView->setTemplatePathAndFilename(t3lib_div::getFileAbsFileName($optionalPlaintextPath));
+			$plainTextView->setTemplatePathAndFilename(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($optionalPlaintextPath));
 
 			if (method_exists($plainTextView, 'injectSettings')) {
 				$plainTextView->injectSettings($settings);
@@ -227,14 +227,14 @@ class Tx_CabagExtbase_Utility_Mail {
 		
 		if($this->useSwiftmailer === true) {
 			// Swiftmailer
-			$mail = t3lib_div::makeInstance('t3lib_mail_Message');
+			$mail = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Mail\\MailMessage');
 			$mail->setFrom(array($fromEmail => $fromName));
 			
 			// support direct array and comma separated list of recipients
 			if (is_array($email)) {
 				$recipients = $email;
 			} else {
-				$explodedString = t3lib_div::trimExplode(',',$email);
+				$explodedString = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',',$email);
 				foreach ($explodedString as $key => $email) {
 					$recipients[$email] = $email;
 				}
@@ -263,7 +263,7 @@ class Tx_CabagExtbase_Utility_Mail {
 			return $mail->send();
 		} else {
 			// Backwards compatibilty - use t3lib_htmlmail class
-			$mail = t3lib_div::makeInstance('t3lib_htmlmail');
+			$mail = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('t3lib_htmlmail');
 			$mail->start();
 			$mail->subject = $subject;
 			$mail->recipient = $email;

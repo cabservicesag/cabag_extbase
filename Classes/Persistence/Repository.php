@@ -34,8 +34,8 @@
  * @version $ID:$
  * @api
  */
-class Tx_CabagExtbase_Persistence_Repository extends Tx_Extbase_Persistence_Repository {
-	
+class Tx_CabagExtbase_Persistence_Repository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+
 	/**
 	 * The query settings.
 	 *
@@ -49,13 +49,13 @@ class Tx_CabagExtbase_Persistence_Repository extends Tx_Extbase_Persistence_Repo
 	 */
 	public function __construct() {
 		parent::__construct();
-		
-		if (class_exists('Tx_Extbase_Object_ObjectManager')) {
+
+		if (class_exists('\\TYPO3\\CMS\\Extbase\\Object\\ObjectManager')) {
 			// extbase 1.3
-			$objectManager = t3lib_div::makeInstance('Tx_Extbase_Object_ObjectManager');
+			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
 			$this->queryFactory = $objectManager->get('Tx_CabagExtbase_Persistence_QueryFactory');
 		} else {
-			$this->queryFactory = t3lib_div::makeInstance('Tx_CabagExtbase_Persistence_QueryFactory'); // singleton
+			$this->queryFactory = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_CabagExtbase_Persistence_QueryFactory'); // singleton
 		}
 	}
 
@@ -63,17 +63,17 @@ class Tx_CabagExtbase_Persistence_Repository extends Tx_Extbase_Persistence_Repo
 	 * Sets the Query Settings. These Query settings must match the settings expected by
 	 * the specific Storage Backend.
 	 *
-	 * @param Tx_Extbase_Persistence_QuerySettingsInterface $querySettings The Query Settings
+	 * @param \TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface $querySettings The Query Settings
 	 * @return void
 	 */
-	public function setQuerySettings(Tx_Extbase_Persistence_QuerySettingsInterface $querySettings) {
+	public function setQuerySettings(\TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface $querySettings) {
 		$this->querySettings = $querySettings;
 	}
 
 	/**
 	 * Returns the Query Settings.
-	 * 
-	 * @return Tx_Extbase_Persistence_QuerySettingsInterface $querySettings The Query Settings
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface $querySettings The Query Settings
 	 */
 	public function getQuerySettings() {
 		return $this->querySettings;
