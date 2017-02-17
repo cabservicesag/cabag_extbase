@@ -1,4 +1,6 @@
 2017-02-17 Tizian Schmidlin, Xiaoling Peng <st@cabag.ch>,<xp@cabag.ch>
+	* version 1.0.1
+	* removed JCR support
 	* version 1.0.0
 	* fixed php without compatibility6 in TYPO3 7.6
 

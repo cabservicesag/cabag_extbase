@@ -84,11 +84,9 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends \TYPO3\CMS
 	protected function parseOrderings(array $orderings, \TYPO3\CMS\Extbase\Persistence\Generic\Qom\SourceInterface $source, array &$sql) {
 		foreach ($orderings as $propertyName => $order) {
 			switch ($order) {
-				case Tx_Extbase_Persistence_QOM_QueryObjectModelConstantsInterface::JCR_ORDER_ASCENDING: // Deprecated since Extbase 1.1
 				case \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING:
 					$order = 'ASC';
 					break;
-				case Tx_Extbase_Persistence_QOM_QueryObjectModelConstantsInterface::JCR_ORDER_DESCENDING: // Deprecated since Extbase 1.1
 				case \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING:
 					$order = 'DESC';
 					break;
@@ -104,7 +102,7 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends \TYPO3\CMS
 			} elseif ($source instanceof \TYPO3\CMS\Extbase\Persistence\Generic\Qom\JoinInterface) {
 				$tableName = $source->getLeft()->getSelectorName();
 			}
-			
+
 			$aConcatFields = array();
 			if(preg_match('/(concat)\(([^)]*)\)\s*as\s+([^\s]+)/i', $propertyName, $aConcatFields)) {
 				$currentTable = $sql['fields'];
@@ -115,16 +113,16 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends \TYPO3\CMS
 				}
 				// $sql['fields'] = $aConcatFields[1] . '('.$aConcatFields[3].') as ' . $aConcatFields[4];
 				$columnName = $aConcatFields[3];
-				
+
 				$tableName = '';
-				
+
 			} elseif(!stristr($propertyName,'replace') && !stristr($className, 'replace')) {
 				$columnName = $this->dataMapper->convertPropertyNameToColumnName($propertyName, $className);
 			}else {
 				$columnName = $propertyName;
 				$tableName = '';
 			}
-			
+
 			if (strlen($tableName) > 0) {
 				$sql['orderings'][] = $tableName . '.' . $columnName . ' ' . $order;
 			} else {
@@ -237,4 +235,3 @@ class Tx_CabagExtbase_Persistence_Storage_CabagTypo3DbBackend extends \TYPO3\CMS
 		}
 	}
 }
-
